@@ -16,9 +16,9 @@
 
 ## :people_hugging: Authors
 
-|<img src="https://github.com/yungahui.png">|<img src="https://github.com/deslog.png">|<img src="https://github.com/hardworking-nomad.png">|<img src="https://github.com/SeonJeon.png">|<img src="https://github.com/keypark22.png">|<img src="https://github.com/jola7373.png">|
+|<img src="https://github.com/yungahui.png">|<img src="https://github.com/deslog.png">|<img src="https://github.com/hardworking-nomad.png">|<img src="https://github.com/SeonJeon.png">|<img src="https://github.com/keypark22.png">|<img src="https://github.com/pppaper.png">|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|[Aesop](https://github.com/yungahui)|[Brown](https://github.com/deslog)|[Hiro](https://github.com/hardworking-nomad)|[Jack](https://github.com/SeonJeon)|[Key](https://github.com/keypark22)|[Neoul](https://github.com/너울)|
+|[Aesop](https://github.com/yungahui)|[Brown](https://github.com/deslog)|[Hiro](https://github.com/hardworking-nomad)|[Jack](https://github.com/SeonJeon)|[Key](https://github.com/keypark22)|[Neoul](https://github.com/pppaper)|
 
 
 ## :fireworks: Screenshots
