@@ -12,6 +12,7 @@
 		38A8DC612850B8E7007095B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC602850B8E7007095B5 /* Assets.xcassets */; };
 		38A8DC642850B8E7007095B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */; };
 		38A8DC6C2850B986007095B5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC6B2850B986007095B5 /* .swiftlint.yml */; };
+		38BBD85B2851E22F00158D5A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8592851E22F00158D5A /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		38A8DC602850B8E7007095B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38A8DC6B2850B986007095B5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		38BBD85A2851E22F00158D5A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		38A8DC5B2850B8E6007095B5 /* ChagokChagok */ = {
 			isa = PBXGroup;
 			children = (
+				38BBD8582851E20000158D5A /* DataModel */,
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
 				38A8DC602850B8E7007095B5 /* Assets.xcassets */,
@@ -68,6 +71,14 @@
 				38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38BBD8582851E20000158D5A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				38BBD8592851E22F00158D5A /* Model.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			files = (
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
+				38BBD85B2851E22F00158D5A /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +377,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38BBD8592851E22F00158D5A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38BBD85A2851E22F00158D5A /* Model.xcdatamodel */,
+			);
+			currentVersion = 38BBD85A2851E22F00158D5A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 38A8DC512850B8E6007095B5 /* Project object */;
 }
