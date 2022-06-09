@@ -12,9 +12,12 @@
 		38A8DC612850B8E7007095B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC602850B8E7007095B5 /* Assets.xcassets */; };
 		38A8DC642850B8E7007095B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */; };
 		38A8DC6C2850B986007095B5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC6B2850B986007095B5 /* .swiftlint.yml */; };
-		38BBD85B2851E22F00158D5A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8592851E22F00158D5A /* Model.xcdatamodeld */; };
+		38BBD85B2851E22F00158D5A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8592851E22F00158D5A /* DataModel.xcdatamodeld */; };
 		38BBD85E2851E57200158D5A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD85D2851E57200158D5A /* ListCell.swift */; };
 		38BBD8622851ECD900158D5A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8612851ECD900158D5A /* DataController.swift */; };
+		38BBD864285208DE00158D5A /* TempAddDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD863285208DE00158D5A /* TempAddDataView.swift */; };
+		38BBD87028521DEA00158D5A /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD86F28521DEA00158D5A /* Pin+CoreDataProperties.swift */; };
+		38BBD87228521EA300158D5A /* Pin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD87128521EA300158D5A /* Pin+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		38BBD85A2851E22F00158D5A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		38BBD85D2851E57200158D5A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		38BBD8612851ECD900158D5A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		38BBD863285208DE00158D5A /* TempAddDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAddDataView.swift; sourceTree = "<group>"; };
+		38BBD86F28521DEA00158D5A /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		38BBD87128521EA300158D5A /* Pin+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +86,9 @@
 		38BBD8582851E20000158D5A /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				38BBD8592851E22F00158D5A /* Model.xcdatamodeld */,
+				38BBD86F28521DEA00158D5A /* Pin+CoreDataProperties.swift */,
+				38BBD87128521EA300158D5A /* Pin+CoreDataClass.swift */,
+				38BBD8592851E22F00158D5A /* DataModel.xcdatamodeld */,
 				38BBD8612851ECD900158D5A /* DataController.swift */,
 			);
 			path = DataModel;
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
+				38BBD863285208DE00158D5A /* TempAddDataView.swift */,
 				38BBD85F2851EBB200158D5A /* Component */,
 			);
 			path = View;
@@ -207,7 +216,10 @@
 				38BBD8622851ECD900158D5A /* DataController.swift in Sources */,
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
-				38BBD85B2851E22F00158D5A /* Model.xcdatamodeld in Sources */,
+				38BBD87028521DEA00158D5A /* Pin+CoreDataProperties.swift in Sources */,
+				38BBD85B2851E22F00158D5A /* DataModel.xcdatamodeld in Sources */,
+				38BBD87228521EA300158D5A /* Pin+CoreDataClass.swift in Sources */,
+				38BBD864285208DE00158D5A /* TempAddDataView.swift in Sources */,
 				38BBD85E2851E57200158D5A /* ListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,13 +423,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		38BBD8592851E22F00158D5A /* Model.xcdatamodeld */ = {
+		38BBD8592851E22F00158D5A /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				38BBD85A2851E22F00158D5A /* Model.xcdatamodel */,
 			);
 			currentVersion = 38BBD85A2851E22F00158D5A /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
