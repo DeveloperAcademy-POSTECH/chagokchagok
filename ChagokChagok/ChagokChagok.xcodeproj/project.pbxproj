@@ -13,6 +13,7 @@
 		38A8DC642850B8E7007095B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */; };
 		38A8DC6C2850B986007095B5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC6B2850B986007095B5 /* .swiftlint.yml */; };
 		38BBD85B2851E22F00158D5A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8592851E22F00158D5A /* Model.xcdatamodeld */; };
+		38BBD85E2851E57200158D5A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD85D2851E57200158D5A /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38A8DC6B2850B986007095B5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38BBD85A2851E22F00158D5A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		38BBD85D2851E57200158D5A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,10 @@
 		38A8DC5B2850B8E6007095B5 /* ChagokChagok */ = {
 			isa = PBXGroup;
 			children = (
-				38BBD8582851E20000158D5A /* DataModel */,
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
-				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
-				38A8DC602850B8E7007095B5 /* Assets.xcassets */,
+				38BBD85C2851E32C00158D5A /* View */,
+				38BBD8582851E20000158D5A /* DataModel */,
+				38BBD8602851EC0300158D5A /* Resources */,
 				38A8DC622850B8E7007095B5 /* Preview Content */,
 			);
 			path = ChagokChagok;
@@ -79,6 +81,31 @@
 				38BBD8592851E22F00158D5A /* Model.xcdatamodeld */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		38BBD85C2851E32C00158D5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
+				38BBD85F2851EBB200158D5A /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38BBD85F2851EBB200158D5A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				38BBD85D2851E57200158D5A /* ListCell.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		38BBD8602851EC0300158D5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38A8DC602850B8E7007095B5 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +204,7 @@
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
 				38BBD85B2851E22F00158D5A /* Model.xcdatamodeld in Sources */,
+				38BBD85E2851E57200158D5A /* ListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
