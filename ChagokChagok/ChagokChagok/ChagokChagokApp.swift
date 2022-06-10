@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct ChagokChagokApp: App {
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
