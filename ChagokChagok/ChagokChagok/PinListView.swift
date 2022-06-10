@@ -34,7 +34,7 @@ struct PinListView: View {
                             } label: {
                                 
                                 HStack {
-                                    Rectangle() //핀 대표 이미지로 교체
+                                    Rectangle() // 핀 대표 이미지로 교체
                                         .frame(width: 80, height: 80, alignment: .leading)
                                     
                                     VStack(alignment: .leading, spacing: 8) {
@@ -73,6 +73,24 @@ struct PinListView: View {
             newPin.memo = ""
             newPin.date = Date()
             textFieldInsert = ""
+
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
+    
+    private func updatePin() {
+        withAnimation {
+            let newPin = Pin(context: viewContext)
+            newPin.id = UUID()
+            newPin.name = textFieldInsert
+            textFieldInsert = ""
+            newPin.memo = ""
+            newPin.date = Date()
 
             do {
                 try viewContext.save()

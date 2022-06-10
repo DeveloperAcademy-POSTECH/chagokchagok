@@ -15,6 +15,7 @@
 		8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7E62852DDD80057C5FC /* PinListView.swift */; };
 		8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7E82852DE610057C5FC /* Persistence.swift */; };
 		8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */; };
+		8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7ED285326D00057C5FC /* PinDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8C06B7E62852DDD80057C5FC /* PinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinListView.swift; sourceTree = "<group>"; };
 		8C06B7E82852DE610057C5FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8C06B7EB2852DEB40057C5FC /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		8C06B7ED285326D00057C5FC /* PinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
 				8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */,
 				8C06B7E62852DDD80057C5FC /* PinListView.swift */,
+				8C06B7ED285326D00057C5FC /* PinDetailView.swift */,
 				8C06B7E82852DE610057C5FC /* Persistence.swift */,
 				38A8DC602850B8E7007095B5 /* Assets.xcassets */,
 				38A8DC622850B8E7007095B5 /* Preview Content */,
@@ -175,6 +178,7 @@
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
 				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
+				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
 			);
