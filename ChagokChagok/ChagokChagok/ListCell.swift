@@ -6,6 +6,7 @@ struct ListCell: View {
     var memo: String?
     var createTime: String
     var type: String
+    var isFavorite: Bool
     
     var body: some View {
         HStack {
@@ -23,9 +24,12 @@ struct ListCell: View {
             }
             Spacer()
             VStack {
-                Image(systemName: "heart")
+                Image(systemName: isFavorite ? "heart.fill" : "heart")
                     .frame(width: 20, height: 20, alignment: .topTrailing)
                     .padding(.top, 5)
+//                    .onTapGesture {
+//                        isFavorite.toggle()
+//                    }
                 Spacer()
             }
         }
@@ -35,7 +39,7 @@ struct ListCell: View {
 
 struct ListCell_Previews: PreviewProvider {
     static var previews: some View {
-        ListCell(image: "tempPin", name: "멋진 동산", memo: "저기 진짜 맛있어보인다", createTime: "2022.03.12", type: "핀")
+        ListCell(image: "tempPin", name: "멋진 동산", memo: "저기 진짜 맛있어보인다", createTime: "2022.03.12", type: "핀", isFavorite: true)
             .previewLayout(.sizeThatFits)
     }
 }
