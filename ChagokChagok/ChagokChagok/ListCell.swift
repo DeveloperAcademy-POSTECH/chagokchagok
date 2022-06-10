@@ -16,7 +16,6 @@ struct ListCell: View {
                 Text(name != nil ? name! : createTime)
                     .bold()
                     .font(.system(size: 16))
-                    .font(.footnote)
                     .padding(.bottom, 0.01)
                 Text(memo != nil ? "\(memo!)" : "메모를 입력해주세요.")
                     .font(.system(size: 14))
@@ -31,7 +30,6 @@ struct ListCell: View {
             }
         }
         .frame(width: 350, height: 92)
-        .background(Color.white.opacity(0.085))
     }
 }
 
