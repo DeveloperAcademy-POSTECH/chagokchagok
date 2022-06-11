@@ -14,6 +14,13 @@ struct ListCell: View {
                 .resizable()
                 .frame(width: 92, height: 92)
             VStack(alignment: .leading) {
+                Text(type)
+                    .padding(5)
+                    .frame(width: 40, height: 20, alignment: .center)
+                    .background(Color.gray)
+                    .foregroundColor(.white)
+                    .font(.system(size: 12))
+                    .cornerRadius(15)
                 Text(name != nil ? name! : createTime)
                     .bold()
                     .font(.system(size: 16))
