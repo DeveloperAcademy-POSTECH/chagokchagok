@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3870D8422854A0E70067F44A /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D8412854A0E70067F44A /* CategoryData.swift */; };
+		3870D8442854AA190067F44A /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D8432854AA190067F44A /* SelectCategoryView.swift */; };
 		38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */; };
 		38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8DC5E2850B8E6007095B5 /* ContentView.swift */; };
 		38A8DC612850B8E7007095B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC602850B8E7007095B5 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3870D8412854A0E70067F44A /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		3870D8432854AA190067F44A /* SelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
 		38A8DC592850B8E6007095B5 /* ChagokChagok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChagokChagok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChagokChagokApp.swift; sourceTree = "<group>"; };
 		38A8DC5E2850B8E6007095B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
 				38A8DC602850B8E7007095B5 /* Assets.xcassets */,
 				38A8DC622850B8E7007095B5 /* Preview Content */,
+				3870D8412854A0E70067F44A /* CategoryData.swift */,
+				3870D8432854AA190067F44A /* SelectCategoryView.swift */,
 			);
 			path = ChagokChagok;
 			sourceTree = "<group>";
@@ -163,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3870D8442854AA190067F44A /* SelectCategoryView.swift in Sources */,
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
+				3870D8422854A0E70067F44A /* CategoryData.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
