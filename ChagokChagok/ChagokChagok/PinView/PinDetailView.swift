@@ -10,10 +10,6 @@ import SwiftUI
 struct PinDetailView: View {
 
     var pin = Pin()
-    var pageTitle = HStack {
-        Image(systemName: "mappin.circle.fill")
-        Text("핀")
-    }
     
     var body: some View {
           
@@ -71,26 +67,25 @@ struct PinDetailView: View {
                             
                         } label: {
                             Image(systemName: "heart")
-
                         }
                         
-                        Button {
-                            
+                        NavigationLink {
+                            PinEditView(pin: pin, textFieldName: pin.name!, textFieldMemo: pin.memo!)
                         } label: {
                             Image(systemName: "square.and.pencil")
                         }
-                    }
                 }
+            }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-let formatter = DateFormatter()
-formatter.dateStyle = .short
-formatter.timeStyle = .none
-return formatter
-}()
+//private let itemFormatter: DateFormatter = {
+//let formatter = DateFormatter()
+//formatter.dateStyle = .short
+//formatter.timeStyle = .none
+//return formatter
+//}()
 
 //struct PinDetailView_Previews: PreviewProvider {
 //    static var previews: some View {

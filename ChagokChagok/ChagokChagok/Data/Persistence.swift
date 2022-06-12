@@ -14,11 +14,11 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for xxx in 0..<10 {
+        for xxx in 0..<2 {
             let newPin = Pin(context: viewContext)
             newPin.name = String("\(xxx)")
             newPin.id = UUID()
-            newPin.memo = nil
+            newPin.memo = ""
             newPin.date = Date()
             newPin.longitude = 39.000
             newPin.latitude = 120.000
