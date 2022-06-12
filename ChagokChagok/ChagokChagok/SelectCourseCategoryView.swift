@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SelectCategoryView: View {
+struct SelectCourseCategoryView: View {
     // TODO: 해당 pin/course 가 어떤 카테고린지 받아와야함
     @State var currentCategory = CourseCategory.city.rawValue
     let column = [GridItem(.adaptive(minimum: 100))]
@@ -50,8 +50,8 @@ struct SelectCategoryView: View {
     }
 }
 
-struct SelectCategoryView_Previews: PreviewProvider {
+struct SelectCourseCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectCategoryView()
+        SelectCourseCategoryView()
     }
 }
