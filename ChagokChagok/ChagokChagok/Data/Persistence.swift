@@ -17,6 +17,13 @@ struct PersistenceController {
         for xxx in 0..<10 {
             let newPin = Pin(context: viewContext)
             newPin.name = String("\(xxx)")
+            newPin.id = UUID()
+            newPin.memo = nil
+            newPin.date = Date()
+            newPin.longitude = 39.000
+            newPin.latitude = 120.000
+            newPin.isFavorite = false
+            newPin.isEdited = false
         }
         do {
             try viewContext.save()

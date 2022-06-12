@@ -16,6 +16,9 @@
 		8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7E82852DE610057C5FC /* Persistence.swift */; };
 		8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */; };
 		8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7ED285326D00057C5FC /* PinDetailView.swift */; };
+		8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EF2854A92E0057C5FC /* PinEditView.swift */; };
+		8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7F52854BEF60057C5FC /* DataController.swift */; };
+		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		8C06B7E82852DE610057C5FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8C06B7EB2852DEB40057C5FC /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		8C06B7ED285326D00057C5FC /* PinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailView.swift; sourceTree = "<group>"; };
+		8C06B7EF2854A92E0057C5FC /* PinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEditView.swift; sourceTree = "<group>"; };
+		8C06B7F52854BEF60057C5FC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +70,10 @@
 			children = (
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
-				8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */,
-				8C06B7E62852DDD80057C5FC /* PinListView.swift */,
-				8C06B7ED285326D00057C5FC /* PinDetailView.swift */,
-				8C06B7E82852DE610057C5FC /* Persistence.swift */,
+				8C06B7F12854ADFC0057C5FC /* PinView */,
+				8C06B7F72854CF760057C5FC /* Helper */,
 				38A8DC602850B8E7007095B5 /* Assets.xcassets */,
+				8C06B7F22854AE150057C5FC /* Data */,
 				38A8DC622850B8E7007095B5 /* Preview Content */,
 			);
 			path = ChagokChagok;
@@ -80,6 +85,34 @@
 				38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C06B7F12854ADFC0057C5FC /* PinView */ = {
+			isa = PBXGroup;
+			children = (
+				8C06B7E62852DDD80057C5FC /* PinListView.swift */,
+				8C06B7ED285326D00057C5FC /* PinDetailView.swift */,
+				8C06B7EF2854A92E0057C5FC /* PinEditView.swift */,
+			);
+			path = PinView;
+			sourceTree = "<group>";
+		};
+		8C06B7F22854AE150057C5FC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */,
+				8C06B7E82852DE610057C5FC /* Persistence.swift */,
+				8C06B7F52854BEF60057C5FC /* DataController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8C06B7F72854CF760057C5FC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8C06B7FA2854D52C0057C5FC /* DateFormat.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +211,12 @@
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
 				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
+				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
+				8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
+				8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
