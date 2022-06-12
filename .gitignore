@@ -36,3 +36,5 @@ Temporary Items
 
 *.xcuserstate
 UserInterfaceState.xcuserstate
+xcuserdata/*
+xcuserdata
