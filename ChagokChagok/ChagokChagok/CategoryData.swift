@@ -9,6 +9,10 @@ extension Image {
     static let nightscapeImage: Image = Image("tempCategoryimage")
     static let withfriendImage: Image = Image("tempCategoryimage")
     static let walkroadImage: Image = Image("tempCategoryimage")
+    static let cafeImage: Image = Image("tempCategoryimage")
+    static let restaurantImage: Image = Image("tempCategoryimage")
+    static let natureImage: Image = Image("tempCategoryimage")
+    static let photospotImage: Image = Image("tempCategoryimage")
 }
 
 enum CourseCategory: String, CaseIterable, Hashable {
@@ -20,6 +24,13 @@ enum CourseCategory: String, CaseIterable, Hashable {
     case nightscape = "야경"
     case withfriend = "친구랑"
     case walkroad = "산책로"
+}
+
+enum PinCategory: String, CaseIterable, Hashable {
+    case cafe = "카페"
+    case restaurant = "맛집"
+    case nature = "자연"
+    case photospot = "사진스팟"
 }
 
 extension CourseCategory {
@@ -41,6 +52,21 @@ extension CourseCategory {
             return Image.withfriendImage
         case .walkroad:
             return Image.walkroadImage
+        }
+    }
+}
+
+extension PinCategory {
+    var categoryImage: Image {
+        switch self {
+        case .cafe:
+            return Image.cafeImage
+        case .restaurant:
+            return Image.restaurantImage
+        case .nature:
+            return Image.natureImage
+        case .photospot:
+            return Image.photospotImage
         }
     }
 }
