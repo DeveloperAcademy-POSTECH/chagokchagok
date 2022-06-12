@@ -1,14 +1,14 @@
 import SwiftUI
 
 extension Image {
-    static let cityImage: Image = Image("tempCategoryImgae")
-    static let beachImgae: Image = Image("tempCategoryImgae")
-    static let mountainImage: Image = Image("tempCategoryImgae")
-    static let riverImage: Image = Image("tempCategoryImgae")
-    static let sceneryImgae: Image = Image("tempCategoryImgae")
-    static let nightscapeImage: Image = Image("tempCategoryImgae")
-    static let withfriendImage: Image = Image("tempCategoryImgae")
-    static let walkroadImage: Image = Image("tempCategoryImgae")
+    static let cityImage: Image = Image("tempCategoryimage")
+    static let beachImgae: Image = Image("tempCategoryimage")
+    static let mountainImage: Image = Image("tempCategoryimage")
+    static let riverImage: Image = Image("tempCategoryimage")
+    static let sceneryImgae: Image = Image("tempCategoryimage")
+    static let nightscapeImage: Image = Image("tempCategoryimage")
+    static let withfriendImage: Image = Image("tempCategoryimage")
+    static let walkroadImage: Image = Image("tempCategoryimage")
 }
 
 enum CourseCategory: String, CaseIterable, Hashable {
