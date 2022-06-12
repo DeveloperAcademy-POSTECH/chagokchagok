@@ -8,26 +8,33 @@
 import SwiftUI
 
 struct PinDetailView: View {
-
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: true)],
+        animation: .default) private var pins: FetchedResults<Pin>
+    
     var pin = Pin()
     
     var body: some View {
-          
-        NavigationView {
                 VStack {
                     HStack {
-                        Circle()
-                            .frame(width: 100, height: 100, alignment: .leading)
-                            .padding(.trailing)
+                        VStack {
+                            Circle()
+                                .foregroundColor(.gray)
+                                .frame(width: 80, height: 80, alignment: .leading)
+                            
+                            Text("풍경") // 추후 pin.category로 변경
+                                .font(.caption)
+                        }.padding(.trailing)
 
                         VStack {
                             HStack {
                                 Text(pin.name!)
                                     .font(.title)
-                                .fontWeight(.semibold)
+                                    .fontWeight(.semibold)
                                 
                                 Spacer()
-                            }
+                            }.frame(height: 80)
                             HStack {
                                 Text("경상북도 포항항 (좌표->주소)")
                                 Text("|")
@@ -48,35 +55,34 @@ struct PinDetailView: View {
                     
                     Text(pin.memo ?? "내용 없음")
                         .frame(width: 360, height: 100, alignment: .topLeading)
-                        .border(.gray, width: 1)
                     Spacer()
 
                 }
-            }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image(systemName: "mappin.circle.fill")
-                        Text("핀")
+                .navigationTitle("")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        HStack {
+                            Image(systemName: "mappin.circle.fill")
+                            Text("핀")
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        HStack {
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "heart")
+                            }
+                            
+                            NavigationLink {
+                                PinEditView(pin: pin, textFieldName: pin.name!, textFieldMemo: pin.memo!)
+                            } label: {
+                                Image(systemName: "square.and.pencil")
+                            }
+                        }
                     }
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    HStack {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "heart")
-                        }
-                        
-                        NavigationLink {
-                            PinEditView(pin: pin, textFieldName: pin.name!, textFieldMemo: pin.memo!)
-                        } label: {
-                            Image(systemName: "square.and.pencil")
-                        }
-                }
-            }
-        }
     }
 }
 

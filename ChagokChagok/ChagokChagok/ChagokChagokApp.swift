@@ -16,7 +16,7 @@ struct ChagokChagokApp: App {
     
     var body: some Scene {
         WindowGroup {
-            PinListView()
+            ContentView()
                 .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }

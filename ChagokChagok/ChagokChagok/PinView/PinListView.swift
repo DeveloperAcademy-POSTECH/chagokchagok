@@ -60,6 +60,8 @@ struct PinListView: View {
                     .onDelete(perform: deletePins)
                 }
                 .listStyle(.plain)
+                
+                Spacer()
             }
         }
     }
@@ -86,24 +88,6 @@ struct PinListView: View {
         }
     }
     
-//    private func updatePin(pin: Pin) {
-//        withAnimation {
-//            let currentID = pin.id
-//            newPin.id = UUID()
-//            newPin.name = textFieldInsert
-//            textFieldInsert = ""
-//            newPin.memo = ""
-//            newPin.date = Date()
-//
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//        }
-//    }
-
     private func deletePins(offsets: IndexSet) {
         withAnimation {
             offsets.map { pins[$0] }.forEach(viewContext.delete)
@@ -117,7 +101,6 @@ struct PinListView: View {
         }
     }
 }
-
 
 struct PinListView_Previews: PreviewProvider {
     static var previews: some View {

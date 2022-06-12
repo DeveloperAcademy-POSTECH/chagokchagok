@@ -18,7 +18,7 @@ struct PersistenceController {
             let newPin = Pin(context: viewContext)
             newPin.name = String("\(xxx)")
             newPin.id = UUID()
-            newPin.memo = ""
+            newPin.memo = "프리뷰 확인을 위해 일단 아무 내용이나 써서 init합니다"
             newPin.date = Date()
             newPin.longitude = 39.000
             newPin.latitude = 120.000
