@@ -27,8 +27,7 @@ struct SelectCategoryView: View {
                                     .overlay(
                                             RoundedRectangle(cornerRadius: 50)
                                                 .stroke(.blue, lineWidth: 3)
-                                                .padding(9)
-                                        )
+                                                .padding(10))
                             } else {
                                 value.categoryImage
                                     .resizable()
