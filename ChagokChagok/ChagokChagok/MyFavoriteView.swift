@@ -3,6 +3,7 @@ import SwiftUI
 struct MyFavoriteView: View {
     var body: some View {
         VStack {
+            myFavoriteCount()
             myFavoriteList()
         }
     }
@@ -20,6 +21,13 @@ struct MyFavoriteView: View {
             }
         }
         .padding(.horizontal, 16)
+    }
+    
+    private func myFavoriteCount() -> some View {
+        Text("Total \(PinData.all().count)")
+            .font(.system(size: 14))
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 20)
     }
 }
 
