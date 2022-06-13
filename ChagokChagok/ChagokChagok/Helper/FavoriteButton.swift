@@ -24,7 +24,6 @@ struct FavoriteButton: View {
                 pin.isFavorite.toggle()
                 pin.isFavorite = true
             }
-            
             do {
                 try viewContext.save()
             } catch {

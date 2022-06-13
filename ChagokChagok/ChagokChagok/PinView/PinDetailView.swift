@@ -11,7 +11,7 @@ struct PinDetailView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: true)],
-        animation: .default) private var pins: FetchedResults<Pin>
+        animation: .default) private var pins: FetchedResults<Pin> // Edit View에서 수정 후 Dismiss -> 즉각 결과를 반영해주기 위해 필요
     
     var pin = Pin()
     

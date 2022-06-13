@@ -32,27 +32,30 @@ struct PinListView: View {
                         NavigationLink {
                             PinDetailView(pin: pin)
                         } label: {
-                                HStack {
-                                Rectangle() // 핀 대표 이미지로 교체
-                                    .frame(width: 80, height: 80, alignment: .leading)
-                                    
-                                VStack(alignment: .leading, spacing: 8) {
-                                    Text(pin.name ?? "값 없음")
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-
-                                    Text(pin.memo ?? "값 없음")
-                                        .font(.body)
-                                        
-                                    Text(dateFormat.string(from: pin.date ?? Date.now))
-                                }
-                                Spacer()
-                                    
-                                VStack {
-                                    FavoriteButton(pin: pin)
-                                    Spacer()
-                                }
-                            }
+                            ListCell(pin: pin)
+                            
+//                                HStack {
+//                                Rectangle() // 핀 대표 이미지로 교체
+//                                    .frame(width: 80, height: 80, alignment: .leading)
+//
+//                                VStack(alignment: .leading, spacing: 8) {
+//                                    Text(pin.name ?? "값 없음")
+//                                        .font(.title3)
+//                                        .fontWeight(.bold)
+//
+//                                    Text(pin.memo ?? "값 없음")
+//                                        .font(.body)
+//
+//                                    Text(dateFormat.string(from: pin.date ?? Date.now))
+//                                }
+//                                Spacer()
+//
+//                                VStack {
+//                                    FavoriteButton(pin: pin)
+//                                    Spacer()
+//                                }
+//                            }
+                            
                         }
                     }
                     .onDelete(perform: deletePins)

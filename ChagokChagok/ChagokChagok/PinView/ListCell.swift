@@ -1,16 +1,14 @@
 import SwiftUI
 
 struct ListCell: View {
-    var image: String
-    var name: String?
-    var memo: String?
-    var createTime: String
-    var type: String
-    var isFavorite: Bool
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)],
+        animation: .default) private var pins: FetchedResults<Pin>
+    
+    var pin = Pin()
     
     var body: some View {
         HStack {
-            Image(image)
+            Image(systemName: "circle.fill")
                 .resizable()
                 .frame(width: 92, height: 92)
                 .clipShape(Circle())
@@ -19,24 +17,25 @@ struct ListCell: View {
                     Image("tempTypeImage")
                         .resizable()
                         .frame(width: 13, height: 10, alignment: .leading)
-                    Text(type)
+                    Text("코스")
                         .foregroundColor(.gray)
-                        .font(.system(size: 12))
+                        .font(.system(size: 10))
                 }
                 .frame(width: 40, height: 20)
-                Text(name != nil ? name! : createTime)
+                Text(pin.name ?? "임시 제목")
                     .bold()
                     .font(.system(size: 18))
                     .padding(.bottom, 5)
-                Text(memo != nil ? "\(memo!)" : "메모를 입력해주세요.")
+                Text(pin.memo ?? "메모를 입력해주세요.")
                     .font(.system(size: 14))
                     .lineLimit(1)
             }
             Spacer()
             VStack {
-                Image(systemName: isFavorite ? "heart.fill" : "heart")
-                    .frame(width: 20, height: 20, alignment: .topTrailing)
-                    .padding(.top, 5)
+                FavoriteButton(pin: pin)
+//                Image(systemName: isFavorite ? "heart.fill" : "heart")
+//                    .frame(width: 20, height: 20, alignment: .topTrailing)
+//                    .padding(.top, 5)
 //                    .onTapGesture {
 //                        isFavorite.toggle()
 //                    }
@@ -47,9 +46,11 @@ struct ListCell: View {
     }
 }
 
-struct ListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ListCell(image: "tempPin", name: "멋진 동산", memo: "저기 진짜 맛있어보인다", createTime: "2022.03.12", type: "핀", isFavorite: true)
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct ListCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        var pin = Pin()
+//
+//        ListCell(image: "tempPin", name: pin.name, memo: "저기 진짜 맛있어보인다", type: "핀", isFavorite: true)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

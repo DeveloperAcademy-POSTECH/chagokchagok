@@ -88,7 +88,6 @@
 				3870D8412854A0E70067F44A /* CategoryData.swift */,
 				3870D8432854AA190067F44A /* SelectCourseCategoryView.swift */,
 				3870D84B2855D4830067F44A /* SelectPinCategoryView.swift */,
-				38BBD8732852D7C400158D5A /* ListCell.swift */,
 			);
 			path = ChagokChagok;
 			sourceTree = "<group>";
@@ -104,6 +103,7 @@
 		8C06B7F12854ADFC0057C5FC /* PinView */ = {
 			isa = PBXGroup;
 			children = (
+				38BBD8732852D7C400158D5A /* ListCell.swift */,
 				8C06B7E62852DDD80057C5FC /* PinListView.swift */,
 				8C06B7ED285326D00057C5FC /* PinDetailView.swift */,
 				8C06B7EF2854A92E0057C5FC /* PinEditView.swift */,
