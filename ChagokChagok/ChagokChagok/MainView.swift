@@ -7,14 +7,15 @@ struct MainView: View {
                 driveStartBtn
                 myFavoriteBtn
             }
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 16, trailing: 20))
+            .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
             
             HStack {
                 myCourseBtn
                 myPinBtn
             }
-            .padding(.horizontal, 20)
-            recentRecord()
+            .padding(.horizontal, 16)
+            RecentRecord(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.03.12", type: "핀", isFavorite: true)
+                .padding()
             Spacer()
         }
     }
@@ -49,31 +50,6 @@ struct MainView: View {
                 .resizable()
                 .frame(width: 171, height: 130)
         })
-    }
-    
-    private func recentRecord() -> some View {
-        ZStack {
-            VStack {
-                HStack {
-                    Text("최근 추가된 드라이브")
-                        .recentListTitleStyle()
-                        .recentRecordListStyle()
-                    NavigationLink(destination: EmptyView(), label: {
-                        Image(systemName: "chevron.right")
-                            .resizable()
-                            .frame(width: 15, height: 24)
-                            .padding(.horizontal, 18)
-                    })
-                }
-                RecentRecordCell(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.03.12", type: "핀", isFavorite: true)
-                    .padding(.bottom, 18)
-                RecentRecordCell(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.07.02", type: "핀", isFavorite: true)
-                Spacer()
-            }
-        }
-        .frame(width: 358, height: 214)
-        .background(.gray)
-        .cornerRadius(12)
     }
 }
 

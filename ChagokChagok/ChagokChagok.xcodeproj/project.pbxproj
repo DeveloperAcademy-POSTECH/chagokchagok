@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3870D854285705B00067F44A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D853285705B00067F44A /* MainView.swift */; };
-		3870D8562857155A0067F44A /* RecentRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D8552857155A0067F44A /* RecentRecordCell.swift */; };
+		3870D8562857155A0067F44A /* RecentRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D8552857155A0067F44A /* RecentRecord.swift */; };
 		3870D858285752B60067F44A /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D857285752B60067F44A /* TextStyle.swift */; };
 		3870D85A285757210067F44A /* ImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D859285757210067F44A /* ImageStyle.swift */; };
 		3870D85C28575B5B0067F44A /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D85B28575B5B0067F44A /* ViewStyle.swift */; };
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		3870D853285705B00067F44A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		3870D8552857155A0067F44A /* RecentRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRecordCell.swift; sourceTree = "<group>"; };
+		3870D8552857155A0067F44A /* RecentRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRecord.swift; sourceTree = "<group>"; };
 		3870D857285752B60067F44A /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		3870D859285757210067F44A /* ImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyle.swift; sourceTree = "<group>"; };
 		3870D85B28575B5B0067F44A /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 				38A8DC622850B8E7007095B5 /* Preview Content */,
 				38BBD8732852D7C400158D5A /* ListCell.swift */,
 				3870D853285705B00067F44A /* MainView.swift */,
-				3870D8552857155A0067F44A /* RecentRecordCell.swift */,
+				3870D8552857155A0067F44A /* RecentRecord.swift */,
 			);
 			path = ChagokChagok;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 				8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */,
 				3870D854285705B00067F44A /* MainView.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
-				3870D8562857155A0067F44A /* RecentRecordCell.swift in Sources */,
+				3870D8562857155A0067F44A /* RecentRecord.swift in Sources */,
 				3870D85A285757210067F44A /* ImageStyle.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
 				8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */,
