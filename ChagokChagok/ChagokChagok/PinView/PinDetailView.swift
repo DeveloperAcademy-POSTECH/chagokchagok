@@ -23,7 +23,7 @@ struct PinDetailView: View {
                                 .foregroundColor(.gray)
                                 .frame(width: 80, height: 80, alignment: .leading)
                             
-                            Text("풍경") // 추후 pin.category로 변경
+                            Text("풍경") // ToDo: 추후 pin.category로 변경
                                 .font(.caption)
                         }.padding(.trailing)
 
@@ -32,6 +32,8 @@ struct PinDetailView: View {
                                 Text(pin.name!)
                                     .font(.title)
                                     .fontWeight(.semibold)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.5)
                                 
                                 Spacer()
                             }.frame(height: 80)

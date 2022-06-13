@@ -23,7 +23,7 @@ struct PinEditView: View {
                         .foregroundColor(.gray)
                         .frame(width: 80, height: 80, alignment: .leading)
                     
-                    Text("풍경") // 추후 pin.category로 변경
+                    Text("풍경") // ToDo: 추후 pin.category로 변경
                         .font(.subheadline)
                         
                 }.padding(.trailing)
