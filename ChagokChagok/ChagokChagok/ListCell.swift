@@ -11,9 +11,7 @@ struct ListCell: View {
     var body: some View {
         HStack {
             Image(image)
-                .resizable()
-                .frame(width: 92, height: 92)
-                .clipShape(Circle())
+                .listIconStyle()()
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Image("tempTypeImage")

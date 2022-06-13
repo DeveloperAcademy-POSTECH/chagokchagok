@@ -11,9 +11,7 @@ struct RecentRecordCell: View {
     var body: some View {
         HStack {
             Image(image)
-                .resizable()
-                .frame(width: 50, height: 50)
-                .clipShape(Circle())
+                .recentListIconStyle()
             VStack(alignment: .leading, spacing: 0) {
                 // TODO: 핀1,2,,, index
                 Text("\(createTime) \(type)")
