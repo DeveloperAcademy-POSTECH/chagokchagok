@@ -11,7 +11,6 @@ import SwiftUI
 struct ChagokChagokApp: App {
     let persistenceController = PersistenceController.shared
     @Environment(\.managedObjectContext) private var viewContext
-
     
     var body: some Scene {
         WindowGroup {

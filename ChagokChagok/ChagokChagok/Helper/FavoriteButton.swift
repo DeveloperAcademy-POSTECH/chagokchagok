@@ -17,7 +17,20 @@ struct FavoriteButton: View {
     
     var body: some View {
         Button {
-            pin.isFavorite.toggle()
+            if pin.isFavorite == true {
+                pin.isFavorite.toggle()
+                pin.isFavorite = false
+            } else {
+                pin.isFavorite.toggle()
+                pin.isFavorite = true
+            }
+            
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
         } label: {
             Image(systemName: pin.isFavorite ? "heart.fill" : "heart")
         }

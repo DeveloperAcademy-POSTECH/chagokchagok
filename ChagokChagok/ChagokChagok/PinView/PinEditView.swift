@@ -72,9 +72,17 @@ struct PinEditView: View {
     }
     
     private func updatePin(textFieldName: String, textFieldMemo: String) {
-        withAnimation {
+        withAnimation { // 저장이 왜 안될까?
             pin.name = textFieldName
             pin.memo = textFieldMemo
+            
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+            
             self.presentation.wrappedValue.dismiss()
         }
         return()
