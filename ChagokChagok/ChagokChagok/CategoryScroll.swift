@@ -1,12 +1,12 @@
 import SwiftUI
 
 enum Categories: String, CaseIterable, Equatable {
-    case 숲길
-    case 바다
-    case 포토존
-    case 도심
-    case 야경
-    case 꽃길
+    case forest = "숲길"
+    case ocean = "바다"
+    case photo = "포토존"
+    case city = "도심"
+    case night = "야경"
+    case flower = "꽃길"
 }
 
 struct CategoryScroll: View {
@@ -23,7 +23,7 @@ struct CategoryScroll: View {
     }
 }
 
-struct CategoryList:View {
+struct CategoryList: View {
     let item: Categories
     @Binding var selected: [Categories]
     
