@@ -55,20 +55,27 @@ struct MainView: View {
         ZStack {
             VStack {
                 HStack {
-                    Spacer()
                     Text("최근 추가된 드라이브")
                         .font(.system(size: 20))
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
+                        .padding(EdgeInsets(top: 16, leading: 18, bottom: 18, trailing: 18))
+                    NavigationLink(destination: EmptyView(), label: {
+                        Image(systemName: "chevron.right")
+                            .resizable()
+                            .frame(width: 15, height: 24)
+                            .padding(.horizontal, 18)
+                    })
                 }
-                ListCell(image: "tempPin", name: "멋진 동산", memo: "저기 진짜 맛있어보인다", createTime: "2022.03.12", type: "핀", isFavorite: true)
+                RecentRecordCell(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.03.12", type: "핀", isFavorite: true)
+                    .padding(.bottom, 18)
+                RecentRecordCell(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.07.02", type: "핀", isFavorite: true)
+                Spacer()
             }
         }
         .frame(width: 358, height: 214)
-        .background(.red)
+        .background(.gray)
         .cornerRadius(12)
-        .padding(.horizontal, 16)
     }
 }
 
