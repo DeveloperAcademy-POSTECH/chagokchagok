@@ -11,10 +11,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             MainView()
+                .padding(.top, 47)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Text("차곡차곡 🚙")
-                            .padding(.all, 16)
+                            .padding(EdgeInsets(top: 80, leading: 16, bottom: 16, trailing: 16))
                             .font(.system(size: 26).weight(.semibold))
                     }
                 }
