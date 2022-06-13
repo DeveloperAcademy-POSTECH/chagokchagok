@@ -24,10 +24,10 @@ struct ListCell: View {
                 .frame(width: 40, height: 20)
                 Text(name != nil ? name! : createTime)
                     .listTitleStyle()
-                    .padding(.bottom, 5)
+                    .listTextSpaceStyle()
                 Text(memo != nil ? "\(memo!)" : "메모를 입력해주세요.")
                     .listMemoStyle()
-                    .lineLimit(1)
+                    .listMemoSpaceStyle()
             }
             Spacer()
             VStack {

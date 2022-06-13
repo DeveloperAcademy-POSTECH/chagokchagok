@@ -11,6 +11,7 @@
 		3870D8562857155A0067F44A /* RecentRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D8552857155A0067F44A /* RecentRecordCell.swift */; };
 		3870D858285752B60067F44A /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D857285752B60067F44A /* TextStyle.swift */; };
 		3870D85A285757210067F44A /* ImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D859285757210067F44A /* ImageStyle.swift */; };
+		3870D85C28575B5B0067F44A /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D85B28575B5B0067F44A /* ViewStyle.swift */; };
 		38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */; };
 		38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8DC5E2850B8E6007095B5 /* ContentView.swift */; };
 		38A8DC612850B8E7007095B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC602850B8E7007095B5 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		3870D8552857155A0067F44A /* RecentRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRecordCell.swift; sourceTree = "<group>"; };
 		3870D857285752B60067F44A /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		3870D859285757210067F44A /* ImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyle.swift; sourceTree = "<group>"; };
+		3870D85B28575B5B0067F44A /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		38A8DC592850B8E6007095B5 /* ChagokChagok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChagokChagok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChagokChagokApp.swift; sourceTree = "<group>"; };
 		38A8DC5E2850B8E6007095B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				8C06B7FA2854D52C0057C5FC /* DateFormat.swift */,
 				3870D857285752B60067F44A /* TextStyle.swift */,
 				3870D859285757210067F44A /* ImageStyle.swift */,
+				3870D85B28575B5B0067F44A /* ViewStyle.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
 				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
+				3870D85C28575B5B0067F44A /* ViewStyle.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				3870D858285752B60067F44A /* TextStyle.swift in Sources */,

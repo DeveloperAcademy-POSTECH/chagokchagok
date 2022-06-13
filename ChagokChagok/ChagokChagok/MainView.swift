@@ -57,8 +57,7 @@ struct MainView: View {
                 HStack {
                     Text("최근 추가된 드라이브")
                         .recentListTitleStyle()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(EdgeInsets(top: 16, leading: 18, bottom: 18, trailing: 18))
+                        .recentRecordListStyle()
                     NavigationLink(destination: EmptyView(), label: {
                         Image(systemName: "chevron.right")
                             .resizable()
