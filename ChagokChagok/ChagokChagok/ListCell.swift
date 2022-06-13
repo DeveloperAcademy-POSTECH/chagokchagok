@@ -11,7 +11,7 @@ struct ListCell: View {
     var body: some View {
         HStack {
             Image(image)
-                .listIconStyle()()
+                .listIconStyle()
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Image("tempTypeImage")
