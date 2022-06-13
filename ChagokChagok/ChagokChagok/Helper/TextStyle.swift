@@ -9,4 +9,9 @@ extension Text {
     func listMemoStyle() -> Text {
         font(.system(size: 14))
     }
+    
+    func recentListTitleStyle() -> Text {
+        bold()
+            .font(.system(size: 20))
+    }
 }

@@ -56,8 +56,7 @@ struct MainView: View {
             VStack {
                 HStack {
                     Text("최근 추가된 드라이브")
-                        .font(.system(size: 20))
-                        .bold()
+                        .recentListTitleStyle()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(EdgeInsets(top: 16, leading: 18, bottom: 18, trailing: 18))
                     NavigationLink(destination: EmptyView(), label: {
