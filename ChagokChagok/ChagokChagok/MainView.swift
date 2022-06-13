@@ -29,7 +29,7 @@ struct MainView: View {
     }
     
     var myFavoriteBtn: some View {
-        NavigationLink(destination: EmptyView(), label: {
+        NavigationLink(destination: MyFavoriteView(), label: {
             Image("tempMyFavorite")
                 .resizable()
                 .frame(width: 116, height: 276)
