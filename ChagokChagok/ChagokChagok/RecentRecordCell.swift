@@ -17,11 +17,10 @@ struct RecentRecordCell: View {
             VStack(alignment: .leading, spacing: 0) {
                 // TODO: 핀1,2,,, index
                 Text("\(createTime) \(type)")
-                    .bold()
-                    .font(.system(size: 16))
+                    .listTitleStyle()
                     .padding(.bottom, 8)
                 Text(memo != nil ? "\(memo!)" : "메모를 입력해주세요.")
-                    .font(.system(size: 12))
+                    .listMemoStyle()
                     .lineLimit(1)
             }
             Spacer()

@@ -25,11 +25,10 @@ struct ListCell: View {
                 }
                 .frame(width: 40, height: 20)
                 Text(name != nil ? name! : createTime)
-                    .bold()
-                    .font(.system(size: 18))
+                    .listTitleStyle()
                     .padding(.bottom, 5)
                 Text(memo != nil ? "\(memo!)" : "메모를 입력해주세요.")
-                    .font(.system(size: 14))
+                    .listMemoStyle()
                     .lineLimit(1)
             }
             Spacer()
