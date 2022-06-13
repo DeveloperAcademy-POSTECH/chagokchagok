@@ -10,10 +10,10 @@ enum Categories: String, CaseIterable, Equatable {
 }
 
 struct CategoryScroll: View {
-    @State var selectedItems: [Categories] = []
+    @State var selectedItems: [Categories] = [] //TODO: CategoryData와 연결
     
     var body: some View {
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal) { //TODO: 인디케이터 삭제
                 HStack(spacing: 8.0) {
                     ForEach(Categories.allCases, id: \.self) { item in
                         CategoryList(item: item, selected: $selectedItems)
