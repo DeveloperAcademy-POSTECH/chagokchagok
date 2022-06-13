@@ -69,11 +69,7 @@ struct PinDetailView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         HStack {
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "heart")
-                            }
+                            FavoriteButton(pin: pin)
                             
                             NavigationLink {
                                 PinEditView(pin: pin, textFieldName: pin.name!, textFieldMemo: pin.memo!)

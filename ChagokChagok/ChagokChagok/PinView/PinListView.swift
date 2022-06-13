@@ -10,7 +10,7 @@ import SwiftUI
 struct PinListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: true)],
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)],
         animation: .default) private var pins: FetchedResults<Pin>
     
     @State var textFieldInsert: String = ""
@@ -49,9 +49,7 @@ struct PinListView: View {
                                 Spacer()
                                     
                                 VStack {
-                                    Image(systemName: "heart")
-                                        .resizable()
-                                        .frame(width: 15, height: 15)
+                                    FavoriteButton(pin: pin)
                                     Spacer()
                                 }
                             }
