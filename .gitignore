@@ -33,8 +33,3 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
 
-
-*.xcuserstate
-UserInterfaceState.xcuserstate
-xcuserdata/*
-xcuserdata
