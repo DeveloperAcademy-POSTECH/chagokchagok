@@ -1,10 +1,3 @@
-//
-//  CategoryScroll.swift
-//  ChagokChagok
-//
-//  Created by 윤가희 on 2022/06/12.
-//s
-
 import SwiftUI
 
 enum Categories: String, CaseIterable, Equatable {
