@@ -10,7 +10,7 @@ extension View {
             .padding(.bottom, 5)
     }
     
-    func recentRecordListStyle() -> some View {
+    func recentListViewStyle() -> some View {
         frame(maxWidth: .infinity, alignment: .leading)
             .padding(EdgeInsets(top: 16, leading: 18, bottom: 18, trailing: 18))
     }
