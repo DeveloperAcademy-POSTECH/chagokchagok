@@ -25,6 +25,7 @@
 		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
 		E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60454A72856DF2B0050BC42 /* CategoryScroll.swift */; };
 		E6BFBADD28580AF1003CCC5A /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBADC28580AF1003CCC5A /* CourseListView.swift */; };
+		E6BFBADF28581931003CCC5A /* CourseDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBADE28581931003CCC5A /* CourseDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		E60454A72856DF2B0050BC42 /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
 		E6BFBADC28580AF1003CCC5A /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
+		E6BFBADE28581931003CCC5A /* CourseDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,6 @@
 		38A8DC5B2850B8E6007095B5 /* ChagokChagok */ = {
 			isa = PBXGroup;
 			children = (
-				E60454A72856DF2B0050BC42 /* CategoryScroll.swift */,
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
 				8C06B7F12854ADFC0057C5FC /* PinView */,
@@ -94,7 +95,9 @@
 				3870D8432854AA190067F44A /* SelectCourseCategoryView.swift */,
 				3870D84B2855D4830067F44A /* SelectPinCategoryView.swift */,
 				38BBD8732852D7C400158D5A /* ListCell.swift */,
+				E60454A72856DF2B0050BC42 /* CategoryScroll.swift */,
 				E6BFBADC28580AF1003CCC5A /* CourseListView.swift */,
+				E6BFBADE28581931003CCC5A /* CourseDummy.swift */,
 			);
 			path = ChagokChagok;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
+				E6BFBADF28581931003CCC5A /* CourseDummy.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
 				8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
