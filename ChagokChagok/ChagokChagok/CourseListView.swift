@@ -1,9 +1,8 @@
 import SwiftUI
 
-
 struct CourseListView: View {
 
-    //@Binding var currentIndex: Int
+    @State var selectedItems: [String] = []
     
     var body: some View {
         VStack(spacing: 0) {
@@ -17,7 +16,7 @@ struct CourseListView: View {
             .padding(.leading, 20.0)
             .padding(.top, 60.0)
             .frame(maxWidth: .infinity, alignment: .leading)
-            CategoryScroll()
+            CategoryScroll(selectedItems: $selectedItems)
                 .padding(.top, 33.0)
                 .padding(.leading, 20.0)
             Text("Total ")
@@ -27,14 +26,10 @@ struct CourseListView: View {
                 .padding(.leading, 20.0)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, 24.0)
+            FilteredList(selected: $selectedItems) // 선택된 인덱스와 전체 카테고리 목록을 넘겨줌
             Spacer()
             }
             .ignoresSafeArea()
-            
-            /*
-            ListCell()
-                .padding(.top, 18.0)
-             */
     }
 }
 

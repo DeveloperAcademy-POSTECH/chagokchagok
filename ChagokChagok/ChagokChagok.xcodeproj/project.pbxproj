@@ -25,6 +25,8 @@
 		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
 		E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60454A72856DF2B0050BC42 /* CategoryScroll.swift */; };
 		E6BFBADD28580AF1003CCC5A /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBADC28580AF1003CCC5A /* CourseListView.swift */; };
+		E6BFBAE128583594003CCC5A /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE028583594003CCC5A /* FilteredList.swift */; };
+		E6BFBAE328584CA5003CCC5A /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE228584CA5003CCC5A /* DummyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		E60454A72856DF2B0050BC42 /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
 		E6BFBADC28580AF1003CCC5A /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
+		E6BFBAE028583594003CCC5A /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		E6BFBAE228584CA5003CCC5A /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				38BBD8732852D7C400158D5A /* ListCell.swift */,
 				E60454A72856DF2B0050BC42 /* CategoryScroll.swift */,
 				E6BFBADC28580AF1003CCC5A /* CourseListView.swift */,
+				E6BFBAE028583594003CCC5A /* FilteredList.swift */,
+				E6BFBAE228584CA5003CCC5A /* DummyData.swift */,
 			);
 			path = ChagokChagok;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
 				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
+				E6BFBAE128583594003CCC5A /* FilteredList.swift in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
 				8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */,
@@ -243,6 +250,7 @@
 				E6BFBADD28580AF1003CCC5A /* CourseListView.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
 				8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */,
+				E6BFBAE328584CA5003CCC5A /* DummyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
