@@ -25,6 +25,7 @@
 		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
 		CD943D92285849B70076A794 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D91285849B70076A794 /* Location.swift */; };
 		CD943D9528584A820076A794 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9428584A820076A794 /* LocationsViewModel.swift */; };
+		CD943D9928584B760076A794 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9828584B760076A794 /* LocationsView.swift */; };
 		E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60454A72856DF2B0050BC42 /* CategoryScroll.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		CD943D91285849B70076A794 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CD943D9428584A820076A794 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		CD943D9828584B760076A794 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		E60454A72856DF2B0050BC42 /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +86,7 @@
 		38A8DC5B2850B8E6007095B5 /* ChagokChagok */ = {
 			isa = PBXGroup;
 			children = (
-				CD943D9328584A520076A794 /* ViewModels */,
-				CD943D90285849900076A794 /* Models */,
+				CD943D9628584B420076A794 /* coreLocation */,
 				E60454A72856DF2B0050BC42 /* CategoryScroll.swift */,
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
@@ -152,6 +153,24 @@
 				CD943D9428584A820076A794 /* LocationsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD943D9628584B420076A794 /* coreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CD943D9728584B610076A794 /* Views */,
+				CD943D90285849900076A794 /* Models */,
+				CD943D9328584A520076A794 /* ViewModels */,
+			);
+			path = coreLocation;
+			sourceTree = "<group>";
+		};
+		CD943D9728584B610076A794 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD943D9828584B760076A794 /* LocationsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
+				CD943D9928584B760076A794 /* LocationsView.swift in Sources */,
 				CD943D9528584A820076A794 /* LocationsViewModel.swift in Sources */,
 				8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
