@@ -2,7 +2,7 @@ import SwiftUI
 
 
 struct CourseListView: View {
-    var courseList = Country.all()
+
     //@Binding var currentIndex: Int
     
     var body: some View {
