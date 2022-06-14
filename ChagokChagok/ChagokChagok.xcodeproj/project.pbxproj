@@ -28,6 +28,7 @@
 		CD943D9928584B760076A794 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9828584B760076A794 /* LocationsView.swift */; };
 		CD943D9B28584C2C0076A794 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9A28584C2C0076A794 /* LocationsListView.swift */; };
 		CD943D9D285854960076A794 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9C285854960076A794 /* LocationPreviewView.swift */; };
+		CD943D9F285855390076A794 /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9E285855390076A794 /* LocationMapAnnotationView.swift */; };
 		E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60454A72856DF2B0050BC42 /* CategoryScroll.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		CD943D9828584B760076A794 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		CD943D9A28584C2C0076A794 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		CD943D9C285854960076A794 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
+		CD943D9E285855390076A794 /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
 		E60454A72856DF2B0050BC42 /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 				CD943D9828584B760076A794 /* LocationsView.swift */,
 				CD943D9A28584C2C0076A794 /* LocationsListView.swift */,
 				CD943D9C285854960076A794 /* LocationPreviewView.swift */,
+				CD943D9E285855390076A794 /* LocationMapAnnotationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				CD943D92285849B70076A794 /* Location.swift in Sources */,
 				CD943D9D285854960076A794 /* LocationPreviewView.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
+				CD943D9F285855390076A794 /* LocationMapAnnotationView.swift in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
 				CD943D9928584B760076A794 /* LocationsView.swift in Sources */,
