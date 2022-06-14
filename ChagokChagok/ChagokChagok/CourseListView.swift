@@ -1,10 +1,3 @@
-//
-//  CourseListView.swift
-//  ChagokChagok
-//
-//  Created by 윤가희 on 2022/06/14.
-//
-
 import SwiftUI
 
 struct CourseListView: View {
