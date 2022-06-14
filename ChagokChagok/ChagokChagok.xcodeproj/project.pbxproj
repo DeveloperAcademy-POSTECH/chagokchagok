@@ -27,6 +27,7 @@
 		CD943D9528584A820076A794 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9428584A820076A794 /* LocationsViewModel.swift */; };
 		CD943D9928584B760076A794 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9828584B760076A794 /* LocationsView.swift */; };
 		CD943D9B28584C2C0076A794 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9A28584C2C0076A794 /* LocationsListView.swift */; };
+		CD943D9D285854960076A794 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9C285854960076A794 /* LocationPreviewView.swift */; };
 		E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60454A72856DF2B0050BC42 /* CategoryScroll.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		CD943D9428584A820076A794 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		CD943D9828584B760076A794 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		CD943D9A28584C2C0076A794 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		CD943D9C285854960076A794 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		E60454A72856DF2B0050BC42 /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 			children = (
 				CD943D9828584B760076A794 /* LocationsView.swift */,
 				CD943D9A28584C2C0076A794 /* LocationsListView.swift */,
+				CD943D9C285854960076A794 /* LocationPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
 				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
 				CD943D92285849B70076A794 /* Location.swift in Sources */,
+				CD943D9D285854960076A794 /* LocationPreviewView.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
