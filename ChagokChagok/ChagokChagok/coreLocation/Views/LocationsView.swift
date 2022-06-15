@@ -46,7 +46,8 @@ extension LocationsView {
     }
     
     private var mapLayer: some View {
-        Map(coordinateRegion: $vm.mapRegion, showsUserLocation: true, annotationItems: vm.locations, annotationContent: { location in MapAnnotation(coordinate: location.coordinates) { LocationMapAnnotationView()
+        Map(coordinateRegion: $vm.mapRegion, showsUserLocation: true, annotationItems: vm.locations, annotationContent: { location in
+            MapAnnotation(coordinate: location.coordinates) { LocationMapAnnotationView()
                 .scaleEffect(vm.mapLocation == location ? 1.1 : 0.8)
                 .shadow(radius: 10)
                 .onTapGesture {

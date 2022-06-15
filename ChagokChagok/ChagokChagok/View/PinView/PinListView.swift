@@ -25,7 +25,7 @@ struct PinListView: View {
                     NavigationLink {
                         PinDetailView(pin: pin)
                     } label: {
-                        ListCell(pin: pin)
+                        ListCell()
                     }
                 }
                 .onDelete(perform: deletePins)
