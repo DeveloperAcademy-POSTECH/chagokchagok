@@ -10,13 +10,13 @@ enum Categories: String, CaseIterable, Equatable { // TODO: CategoryData 내부 
 }
 
 struct CategoryScroll: View {
-    @Binding var selectedItems: [Categories.RawValue]
+    @Binding var selectedCategory: [Categories.RawValue]
     
     var body: some View {
             ScrollView(.horizontal) {
                 HStack(spacing: 8.0) {
                     ForEach(Categories.allCases, id: \.self) { item in
-                        CategoryList(item: item.rawValue, selected: $selectedItems)
+                        CategoryList(item: item.rawValue, selected: $selectedCategory)
                     }
                 }
             }
@@ -46,10 +46,3 @@ struct CategoryList: View {
         .cornerRadius(15.0)
     }
 }
-/*
-struct CategoryScroll_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryScroll()
-    }
-}
-*/

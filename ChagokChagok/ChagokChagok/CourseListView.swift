@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CourseListView: View {
 
-    @State var selectedItems: [String] = []
+    @State private var selectedCategory: [String] = []
     
     var body: some View {
         VStack(spacing: 0) {
@@ -15,7 +15,7 @@ struct CourseListView: View {
             }
             .padding(EdgeInsets(top: 60.0, leading: 20.0, bottom: 0, trailing: 0))
             .frame(maxWidth: .infinity, alignment: .leading)
-            CategoryScroll(selectedItems: $selectedItems)
+            CategoryScroll(selectedCategory: $selectedCategory)
                 .padding(EdgeInsets(top: 33.0, leading: 20.0, bottom: 0, trailing: 0))
             Text("Total ")
                 .font(.system(size: 14, weight: .regular))
@@ -23,7 +23,7 @@ struct CourseListView: View {
                 .opacity(0.6)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(EdgeInsets(top: 24.0, leading: 20.0, bottom: 0, trailing: 0))
-            FilteredList(selected: $selectedItems) // 선택된 인덱스와 전체 카테고리 목록을 넘겨줌
+            FilteredList(selectedCategory: $selectedCategory) // 선택된 인덱스와 전체 카테고리 목록을 넘겨줌
             Spacer()
             }
             .ignoresSafeArea()

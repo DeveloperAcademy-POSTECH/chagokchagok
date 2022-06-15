@@ -2,7 +2,7 @@ import SwiftUI
 
 struct FilteredList: View {
     var contentsList = PinData.all()
-    @Binding var selected: [String]
+    @Binding var selectedCategory: [String]
     
     var body: some View {
         /* TODO: ListCell 받아와서 넣기
@@ -12,7 +12,7 @@ struct FilteredList: View {
             }
         }
         */
-        if selected.isEmpty {
+        if selectedCategory.isEmpty {
             List(self.contentsList, id: \.name) {content in
                 GroupBox(label: Text(content.name ?? "defaultName"), content: {
                     Text("Dtesting")
@@ -22,7 +22,7 @@ struct FilteredList: View {
             }
         } else {
             List(self.contentsList, id: \.name) { content in
-                if selected.contains(content.category ?? "nil") {
+                if selectedCategory.contains(content.category ?? "nil") {
                     GroupBox(label: Text(content.name ?? "defaultName"), content: {
                         Text("testing")
                             .frame(width: 100, height: 100)
