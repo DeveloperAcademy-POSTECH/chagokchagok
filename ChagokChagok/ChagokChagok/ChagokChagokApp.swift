@@ -9,14 +9,12 @@ import SwiftUI
 
 @main
 struct ChagokChagokApp: App {
-    let persistenceController = PersistenceController.shared
     @Environment(\.managedObjectContext) private var viewContext
-
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
 
         }
     }
