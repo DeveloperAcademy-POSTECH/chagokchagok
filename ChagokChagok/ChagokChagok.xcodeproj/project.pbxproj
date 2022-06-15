@@ -10,6 +10,7 @@
 		3870D8422854A0E70067F44A /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D8412854A0E70067F44A /* CategoryData.swift */; };
 		3870D8442854AA190067F44A /* SelectCourseCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D8432854AA190067F44A /* SelectCourseCategoryView.swift */; };
 		3870D84C2855D4830067F44A /* SelectPinCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D84B2855D4830067F44A /* SelectPinCategoryView.swift */; };
+		3870D852285704460067F44A /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D851285704460067F44A /* CategoryScroll.swift */; };
 		38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */; };
 		38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8DC5E2850B8E6007095B5 /* ContentView.swift */; };
 		38A8DC612850B8E7007095B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC602850B8E7007095B5 /* Assets.xcassets */; };
@@ -24,12 +25,14 @@
 		8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7F52854BEF60057C5FC /* DataController.swift */; };
 		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
 		8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */; };
+		E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60454A72856DF2B0050BC42 /* CategoryScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3870D8412854A0E70067F44A /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		3870D8432854AA190067F44A /* SelectCourseCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCourseCategoryView.swift; sourceTree = "<group>"; };
 		3870D84B2855D4830067F44A /* SelectPinCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPinCategoryView.swift; sourceTree = "<group>"; };
+		3870D851285704460067F44A /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryScroll.swift; path = ChagokChagok/CategoryScroll.swift; sourceTree = "<group>"; };
 		38A8DC592850B8E6007095B5 /* ChagokChagok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChagokChagok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChagokChagokApp.swift; sourceTree = "<group>"; };
 		38A8DC5E2850B8E6007095B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		8C06B7F52854BEF60057C5FC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		E60454A72856DF2B0050BC42 /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		38A8DC502850B8E6007095B5 = {
 			isa = PBXGroup;
 			children = (
+				3870D851285704460067F44A /* CategoryScroll.swift */,
 				38A8DC6B2850B986007095B5 /* .swiftlint.yml */,
 				38A8DC5B2850B8E6007095B5 /* ChagokChagok */,
 				38A8DC5A2850B8E6007095B5 /* Products */,
@@ -78,6 +83,7 @@
 		38A8DC5B2850B8E6007095B5 /* ChagokChagok */ = {
 			isa = PBXGroup;
 			children = (
+				E60454A72856DF2B0050BC42 /* CategoryScroll.swift */,
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
 				8C06B7F12854ADFC0057C5FC /* PinView */,
@@ -225,6 +231,7 @@
 			files = (
 				3870D8442854AA190067F44A /* SelectCourseCategoryView.swift in Sources */,
 				3870D84C2855D4830067F44A /* SelectPinCategoryView.swift in Sources */,
+				E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */,
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
 				3870D8422854A0E70067F44A /* CategoryData.swift in Sources */,
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
@@ -293,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -347,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
