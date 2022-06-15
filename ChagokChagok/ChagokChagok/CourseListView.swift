@@ -13,19 +13,16 @@ struct CourseListView: View {
                 Text("내 코스")
                     .font(.system(size: 24, weight: .bold))
             }
-            .padding(.leading, 20.0)
-            .padding(.top, 60.0)
+            .padding(EdgeInsets(top: 60.0, leading: 20.0, bottom: 0, trailing: 0))
             .frame(maxWidth: .infinity, alignment: .leading)
             CategoryScroll(selectedItems: $selectedItems)
-                .padding(.top, 33.0)
-                .padding(.leading, 20.0)
+                .padding(EdgeInsets(top: 33.0, leading: 20.0, bottom: 0, trailing: 0))
             Text("Total ")
                 .font(.system(size: 14, weight: .regular))
                 .foregroundColor(Color.black)
                 .opacity(0.6)
-                .padding(.leading, 20.0)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 24.0)
+                .padding(EdgeInsets(top: 24.0, leading: 20.0, bottom: 0, trailing: 0))
             FilteredList(selected: $selectedItems) // 선택된 인덱스와 전체 카테고리 목록을 넘겨줌
             Spacer()
             }
