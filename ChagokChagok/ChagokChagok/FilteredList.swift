@@ -12,21 +12,24 @@ struct FilteredList: View {
             }
         }
         */
-        List(self.contentsList, id: \.name) { content in
-            if selected.contains(content.category ?? "nil") {
+        if selected.isEmpty {
+            List(self.contentsList, id: \.name) {content in
                 GroupBox(label: Text(content.name ?? "defaultName"), content: {
-                    Text("testing")
+                    Text("Dtesting")
                         .frame(width: 100, height: 100)
                         .background(.blue)
                 })
             }
+        } else {
+            List(self.contentsList, id: \.name) { content in
+                if selected.contains(content.category ?? "nil") {
+                    GroupBox(label: Text(content.name ?? "defaultName"), content: {
+                        Text("testing")
+                            .frame(width: 100, height: 100)
+                            .background(.blue)
+                    })
+                }
+            }
         }
     }
 }
-/*
-struct FilteredList_Previews: PreviewProvider {
-    static var previews: some View {
-        FilteredList()
-    }
-}
-*/
