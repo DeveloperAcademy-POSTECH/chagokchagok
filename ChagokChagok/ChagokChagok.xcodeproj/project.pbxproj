@@ -20,6 +20,7 @@
 		8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7ED285326D00057C5FC /* PinDetailView.swift */; };
 		8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EF2854A92E0057C5FC /* PinEditView.swift */; };
 		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
+		E6BFBAE528587F5D003CCC5A /* UIcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE428587F5D003CCC5A /* UIcolors.swift */; };
 		8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */; };
 		8CD1F30A2859C30D00E5C2DA /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870D851285704460067F44A /* CategoryScroll.swift */; };
 		8CD1F30E2859C45900E5C2DA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1F30B2859C45900E5C2DA /* Persistence.swift */; };
@@ -48,6 +49,7 @@
 		8C06B7ED285326D00057C5FC /* PinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailView.swift; sourceTree = "<group>"; };
 		8C06B7EF2854A92E0057C5FC /* PinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEditView.swift; sourceTree = "<group>"; };
 		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		E6BFBAE428587F5D003CCC5A /* UIcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolors.swift; sourceTree = "<group>"; };
 		8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		8CD1F30B2859C45900E5C2DA /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8CD1F30D2859C45900E5C2DA /* LocalDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalDataTest.xcdatamodel; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		38A8DC502850B8E6007095B5 = {
 			isa = PBXGroup;
 			children = (
+				E6BFBAE428587F5D003CCC5A /* UIcolors.swift */,
 				38A8DC6B2850B986007095B5 /* .swiftlint.yml */,
 				38A8DC5B2850B8E6007095B5 /* ChagokChagok */,
 				38A8DC5A2850B8E6007095B5 /* Products */,
@@ -266,6 +269,9 @@
 				8CD1F30F2859C45900E5C2DA /* LocalDataTest.xcdatamodeld in Sources */,
 				3870D8422854A0E70067F44A /* CategoryData.swift in Sources */,
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
+				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
+				E6BFBAE528587F5D003CCC5A /* UIcolors.swift in Sources */,
+				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
 				8CD1F3172859C47800E5C2DA /* CourseListView.swift in Sources */,
 				8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */,
 				8CD1F31F2859C58900E5C2DA /* FavoriteButtonForPin.swift in Sources */,
