@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FavoriteButton: View {
+struct FavoriteButtonForPin: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: true)],
@@ -17,13 +17,8 @@ struct FavoriteButton: View {
     
     var body: some View {
         Button {
-            if pin.isFavorite == true {
-                pin.isFavorite.toggle()
-                pin.isFavorite = false
-            } else {
-                pin.isFavorite.toggle()
-                pin.isFavorite = true
-            }
+            pin.isFavorite.toggle()
+                
             do {
                 try viewContext.save()
             } catch {
@@ -36,8 +31,8 @@ struct FavoriteButton: View {
     }
 }
 
-struct FavoriteButton_Previews: PreviewProvider {
+struct FavoriteButtonForPin_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton()
+        FavoriteButtonForPin()
     }
 }

@@ -23,7 +23,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Course" positionX="-349.83984375" positionY="-26.39453125" width="128.6328125" height="163"/>
-        <element name="Pin" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Pin" positionX="-63" positionY="-18" width="128" height="179"/>
+        <element name="Course" positionX="-45" positionY="72" width="128" height="149"/>
     </elements>
 </model>

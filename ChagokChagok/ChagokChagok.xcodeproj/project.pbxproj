@@ -17,13 +17,17 @@
 		38A8DC6C2850B986007095B5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC6B2850B986007095B5 /* .swiftlint.yml */; };
 		38BBD8742852D7C400158D5A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8732852D7C400158D5A /* ListCell.swift */; };
 		8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7E62852DDD80057C5FC /* PinListView.swift */; };
-		8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7E82852DE610057C5FC /* Persistence.swift */; };
-		8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */; };
 		8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7ED285326D00057C5FC /* PinDetailView.swift */; };
 		8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EF2854A92E0057C5FC /* PinEditView.swift */; };
-		8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7F52854BEF60057C5FC /* DataController.swift */; };
 		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
-		8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */; };
+		8C7E7A942856BED6001E3AAF /* FavoriteButtonForPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E7A932856BED6001E3AAF /* FavoriteButtonForPin.swift */; };
+		8C7E7A9828584EF1001E3AAF /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E7A9728584EF1001E3AAF /* CourseListView.swift */; };
+		8C94FAFC285868E400A2BEA9 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94FAFB285868E400A2BEA9 /* CourseDetailView.swift */; };
+		8C94FAFE2858733A00A2BEA9 /* FavoriteButtonForCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94FAFD2858733A00A2BEA9 /* FavoriteButtonForCourse.swift */; };
+		8CD1F2502858C36700E5C2DA /* CourseEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1F24F2858C36700E5C2DA /* CourseEditView.swift */; };
+		8CD1F2AC285965B800E5C2DA /* LocalDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1F2AA285965B800E5C2DA /* LocalDataTest.xcdatamodeld */; };
+		8CD1F2AE285965D400E5C2DA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1F2AD285965D400E5C2DA /* Persistence.swift */; };
+		8CD1F2B0285966A400E5C2DA /* ListCellForCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1F2AF285966A400E5C2DA /* ListCellForCourse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,13 +42,17 @@
 		38A8DC6B2850B986007095B5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38BBD8732852D7C400158D5A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		8C06B7E62852DDD80057C5FC /* PinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinListView.swift; sourceTree = "<group>"; };
-		8C06B7E82852DE610057C5FC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		8C06B7EB2852DEB40057C5FC /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		8C06B7ED285326D00057C5FC /* PinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailView.swift; sourceTree = "<group>"; };
 		8C06B7EF2854A92E0057C5FC /* PinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEditView.swift; sourceTree = "<group>"; };
-		8C06B7F52854BEF60057C5FC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
-		8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		8C7E7A932856BED6001E3AAF /* FavoriteButtonForPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonForPin.swift; sourceTree = "<group>"; };
+		8C7E7A9728584EF1001E3AAF /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
+		8C94FAFB285868E400A2BEA9 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		8C94FAFD2858733A00A2BEA9 /* FavoriteButtonForCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButtonForCourse.swift; sourceTree = "<group>"; };
+		8CD1F24F2858C36700E5C2DA /* CourseEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEditView.swift; sourceTree = "<group>"; };
+		8CD1F2AB285965B800E5C2DA /* LocalDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalDataTest.xcdatamodel; sourceTree = "<group>"; };
+		8CD1F2AD285965D400E5C2DA /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = ../../../../../../Desktop/LocalDataTest/LocalDataTest/Persistence.swift; sourceTree = "<group>"; };
+		8CD1F2AF285966A400E5C2DA /* ListCellForCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellForCourse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +88,11 @@
 			children = (
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
-				8C06B7F12854ADFC0057C5FC /* PinView */,
+				8C7E7A952858468D001E3AAF /* View */,
 				8C06B7F72854CF760057C5FC /* Helper */,
 				38A8DC602850B8E7007095B5 /* Assets.xcassets */,
 				8C06B7F22854AE150057C5FC /* Data */,
 				38A8DC622850B8E7007095B5 /* Preview Content */,
-				3870D8412854A0E70067F44A /* CategoryData.swift */,
-				3870D8432854AA190067F44A /* SelectCourseCategoryView.swift */,
-				3870D84B2855D4830067F44A /* SelectPinCategoryView.swift */,
 			);
 			path = ChagokChagok;
 			sourceTree = "<group>";
@@ -103,10 +108,11 @@
 		8C06B7F12854ADFC0057C5FC /* PinView */ = {
 			isa = PBXGroup;
 			children = (
-				38BBD8732852D7C400158D5A /* ListCell.swift */,
 				8C06B7E62852DDD80057C5FC /* PinListView.swift */,
 				8C06B7ED285326D00057C5FC /* PinDetailView.swift */,
 				8C06B7EF2854A92E0057C5FC /* PinEditView.swift */,
+				38BBD8732852D7C400158D5A /* ListCell.swift */,
+				3870D84B2855D4830067F44A /* SelectPinCategoryView.swift */,
 			);
 			path = PinView;
 			sourceTree = "<group>";
@@ -114,9 +120,8 @@
 		8C06B7F22854AE150057C5FC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */,
-				8C06B7E82852DE610057C5FC /* Persistence.swift */,
-				8C06B7F52854BEF60057C5FC /* DataController.swift */,
+				8CD1F2AA285965B800E5C2DA /* LocalDataTest.xcdatamodeld */,
+				8CD1F2AD285965D400E5C2DA /* Persistence.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -125,9 +130,32 @@
 			isa = PBXGroup;
 			children = (
 				8C06B7FA2854D52C0057C5FC /* DateFormat.swift */,
-				8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */,
+				8C94FAFD2858733A00A2BEA9 /* FavoriteButtonForCourse.swift */,
+				8C7E7A932856BED6001E3AAF /* FavoriteButtonForPin.swift */,
+				3870D8412854A0E70067F44A /* CategoryData.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		8C7E7A952858468D001E3AAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C7E7A96285846A0001E3AAF /* CourseView */,
+				8C06B7F12854ADFC0057C5FC /* PinView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C7E7A96285846A0001E3AAF /* CourseView */ = {
+			isa = PBXGroup;
+			children = (
+				8C7E7A9728584EF1001E3AAF /* CourseListView.swift */,
+				8C94FAFB285868E400A2BEA9 /* CourseDetailView.swift */,
+				8CD1F24F2858C36700E5C2DA /* CourseEditView.swift */,
+				8CD1F2AF285966A400E5C2DA /* ListCellForCourse.swift */,
+				3870D8432854AA190067F44A /* SelectCourseCategoryView.swift */,
+			);
+			path = CourseView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,18 +251,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C94FAFC285868E400A2BEA9 /* CourseDetailView.swift in Sources */,
 				3870D8442854AA190067F44A /* SelectCourseCategoryView.swift in Sources */,
 				3870D84C2855D4830067F44A /* SelectPinCategoryView.swift in Sources */,
 				38A8DC5F2850B8E6007095B5 /* ContentView.swift in Sources */,
+				8C94FAFE2858733A00A2BEA9 /* FavoriteButtonForCourse.swift in Sources */,
+				8CD1F2AC285965B800E5C2DA /* LocalDataTest.xcdatamodeld in Sources */,
 				3870D8422854A0E70067F44A /* CategoryData.swift in Sources */,
+				8CD1F2AE285965D400E5C2DA /* Persistence.swift in Sources */,
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
-				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
-				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
-				8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */,
+				8C7E7A942856BED6001E3AAF /* FavoriteButtonForPin.swift in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
-				8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */,
+				8CD1F2B0285966A400E5C2DA /* ListCellForCourse.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
+				8C7E7A9828584EF1001E3AAF /* CourseListView.swift in Sources */,
+				8CD1F2502858C36700E5C2DA /* CourseEditView.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
 				8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */,
 			);
@@ -362,10 +394,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChagokChagok/Preview Content\"";
-				DEVELOPMENT_TEAM = 82DRSFKFS9;
+				DEVELOPMENT_TEAM = PTBWTQ27YA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -380,6 +413,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmgj.ChagokChagok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -391,10 +425,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChagokChagok/Preview Content\"";
-				DEVELOPMENT_TEAM = 82DRSFKFS9;
+				DEVELOPMENT_TEAM = PTBWTQ27YA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -409,6 +444,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmgj.ChagokChagok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,13 +475,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8C06B7EA2852DEB40057C5FC /* CoreData.xcdatamodeld */ = {
+		8CD1F2AA285965B800E5C2DA /* LocalDataTest.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8C06B7EB2852DEB40057C5FC /* CoreData.xcdatamodel */,
+				8CD1F2AB285965B800E5C2DA /* LocalDataTest.xcdatamodel */,
 			);
-			currentVersion = 8C06B7EB2852DEB40057C5FC /* CoreData.xcdatamodel */;
-			path = CoreData.xcdatamodeld;
+			currentVersion = 8CD1F2AB285965B800E5C2DA /* LocalDataTest.xcdatamodel */;
+			path = LocalDataTest.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

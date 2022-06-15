@@ -30,7 +30,7 @@ struct PinEditView: View {
                 
                 VStack {
                     HStack {
-                        TextField(pin.name!, text: $textFieldName)
+                        TextField(pin.name ?? "", text: $textFieldName)
                             .font(.title)
                             .keyboardType(.default)
                             .foregroundColor(.blue)
@@ -41,7 +41,7 @@ struct PinEditView: View {
                         Text("경상북도 포항항 (좌표->주소)")
                         Text("|")
                             .foregroundColor(.secondary)
-                        Text(dateFormat.string(from: pin.date!))
+                        Text(dateFormat.string(from: pin.date ?? Date()))
                         
                         Spacer()
                     }
@@ -72,9 +72,10 @@ struct PinEditView: View {
     }
     
     private func updatePin(textFieldName: String, textFieldMemo: String) {
-        withAnimation { // 저장이 왜 안될까?
+        withAnimation {
             pin.name = textFieldName
             pin.memo = textFieldMemo
+            pin.isEdited = true
             
             do {
                 try viewContext.save()
