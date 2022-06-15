@@ -1,12 +1,7 @@
 import SwiftUI
 
 struct ListCell: View {
-    var image: String
-    var name: String?
-    var memo: String?
-    var createTime: String
-    var type: String
-    var isFavorite: Bool
+    @State var data: PinData
     
     var body: some View {
         HStack {
@@ -19,7 +14,7 @@ struct ListCell: View {
     }
     
     var listImage: some View {
-        Image(image)
+        Image(data.category ?? "tempCategoryimage")
             .listIconStyle()
     }
     
@@ -29,7 +24,7 @@ struct ListCell: View {
                 Image("tempTypeImage")
                     .resizable()
                     .frame(width: 13, height: 10, alignment: .leading)
-                Text(type)
+                Text(data.type == 1 ? "tempTypeImage" : "tmepTypeImage")
                     .foregroundColor(.gray)
                     .font(.system(size: 12))
             }
@@ -45,12 +40,9 @@ struct ListCell: View {
     
     var isfavoriteBtn: some View {
         VStack {
-            Image(systemName: isFavorite ? "heart.fill" : "heart")
+            Image(systemName: data.isFavorite ? "heart.fill" : "heart")
                 .frame(width: 20, height: 20, alignment: .topTrailing)
                 .padding(.top, 5)
-//                    .onTapGesture {
-//                        isFavorite.toggle()
-//                    }
             Spacer()
         }
     }
@@ -59,7 +51,7 @@ struct ListCell: View {
 
 struct ListCell_Previews: PreviewProvider {
     static var previews: some View {
-        ListCell(image: "tempPin", name: "멋진 동산", memo: "저기 진짜 맛있어보인다", createTime: "2022.03.12", type: "핀", isFavorite: true)
+        ListCell(data: PinData.all().first!)
             .previewLayout(.sizeThatFits)
     }
 }
