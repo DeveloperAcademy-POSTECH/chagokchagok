@@ -29,10 +29,10 @@ struct ListCell: View {
                     .font(.system(size: 12))
             }
             .frame(width: 40, height: 20)
-            Text(data.name != nil ? data.name! : data.date)
+            Text(name ?? createTime)
                 .listTitleStyle()
                 .listTextSpaceStyle()
-            Text(data.memo != nil ? "\(data.memo!)" : "메모를 입력해주세요.")
+            Text(memo ?? "메모를 입력바랍니다아")
                 .listMemoStyle()
                 .listMemoSpaceStyle()
         }
