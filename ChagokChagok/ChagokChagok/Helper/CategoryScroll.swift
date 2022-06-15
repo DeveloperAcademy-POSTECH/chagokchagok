@@ -1,8 +1,8 @@
 import SwiftUI
 
-enum Categories: String, CaseIterable, Equatable {
-    case forest = "숲길"
-    case ocean = "바다"
+enum Categories: String, CaseIterable, Equatable { // TODO: CategoryData 내부 카테고리와 연결 필요
+    case forest = "자연"
+    case ocean = "맛집"
     case photo = "포토존"
     case city = "도심"
     case night = "야경"
@@ -10,13 +10,13 @@ enum Categories: String, CaseIterable, Equatable {
 }
 
 struct CategoryScroll: View {
-    @State var selectedItems: [Categories] = []
+    @Binding var selectedCategory: [Categories.RawValue]
     
     var body: some View {
             ScrollView(.horizontal) {
                 HStack(spacing: 8.0) {
                     ForEach(Categories.allCases, id: \.self) { item in
-                        CategoryList(item: item, selected: $selectedItems)
+                        CategoryList(item: item.rawValue, selected: $selectedCategory)
                     }
                 }
             }
@@ -24,8 +24,8 @@ struct CategoryScroll: View {
 }
 
 struct CategoryList: View {
-    let item: Categories
-    @Binding var selected: [Categories]
+    let item: String
+    @Binding var selected: [String]
     
     var body: some View {
         Button(action: {
@@ -35,7 +35,7 @@ struct CategoryList: View {
                 selected.append(item)
             }
         }, label: {
-            Text(item.rawValue)
+            Text(item)
                 .tag(item)
                 .foregroundColor(selected.contains(item) ? .white : .black)
         })
@@ -44,11 +44,5 @@ struct CategoryList: View {
         .padding(.horizontal, 20.0)
         .background(selected.contains(item) ? Color.blue : Color.gray)
         .cornerRadius(15.0)
-    }
-}
-
-struct CategoryScroll_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryScroll()
     }
 }
