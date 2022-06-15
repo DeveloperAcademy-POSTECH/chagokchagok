@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    let persistenceController = PersistenceController.shared
     @Environment(\.managedObjectContext) private var viewContext
 
     var body: some View {
-        PinListView()
+        NavigationView {
+            VStack {
+                NavigationLink(destination: {
+                    PinListView()
+                }, label: {
+                    Text("핀 뷰")
+                })
+                
+                NavigationLink(destination: {
+                    CourseListView()
+                }, label: {
+                    Text("코스 뷰")
+                })
+            }
+        }
     }
 }
 

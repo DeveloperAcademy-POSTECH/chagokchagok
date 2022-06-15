@@ -1,17 +1,17 @@
 //
-//  PinEditView.swift
+//  CourseEditView.swift
 //  ChagokChagok
 //
-//  Created by Youngwoong Choi on 2022/06/11.
+//  Created by Youngwoong Choi on 2022/06/14.
 //
 
 import SwiftUI
 
-struct PinEditView: View {
+struct CourseEditView: View {
     @Environment(\.presentationMode) var presentation
     @Environment(\.managedObjectContext) private var viewContext
     
-    var pin = Pin()
+    var course = Course()
     @State var textFieldName: String
     @State var textFieldMemo: String
     
@@ -23,14 +23,14 @@ struct PinEditView: View {
                         .foregroundColor(.gray)
                         .frame(width: 80, height: 80, alignment: .leading)
                     
-                    Text("풍경") // 추후 pin.category로 변경
+                    Text("풍경") // ToDo: 추후 pin.category로 변경
                         .font(.subheadline)
                         
                 }.padding(.trailing)
                 
                 VStack {
                     HStack {
-                        TextField(pin.name!, text: $textFieldName)
+                        TextField(course.name ?? "임시 제목", text: $textFieldName)
                             .font(.title)
                             .keyboardType(.default)
                             .foregroundColor(.blue)
@@ -41,7 +41,7 @@ struct PinEditView: View {
                         Text("경상북도 포항항 (좌표->주소)")
                         Text("|")
                             .foregroundColor(.secondary)
-                        Text(dateFormat.string(from: pin.date!))
+                        Text(dateFormat.string(from: course.date ?? Date()))
                         
                         Spacer()
                     }
@@ -63,7 +63,7 @@ struct PinEditView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    updatePin(textFieldName: textFieldName, textFieldMemo: textFieldMemo)
+                    updateCourse(textFieldName: textFieldName, textFieldMemo: textFieldMemo)
                 } label: {
                     Text("저장")
                 }
@@ -71,18 +71,28 @@ struct PinEditView: View {
         }
     }
     
-    private func updatePin(textFieldName: String, textFieldMemo: String) {
+    private func updateCourse(textFieldName: String, textFieldMemo: String) {
         withAnimation {
-            pin.name = textFieldName
-            pin.memo = textFieldMemo
+            course.name = textFieldName
+            course.memo = textFieldMemo
+            course.isEdited = true
+            
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+            
             self.presentation.wrappedValue.dismiss()
         }
         return()
     }
+    
 }
 
-//struct PinEditView_Previews: PreviewProvider {
+//struct CourseEditView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PinEditView()
+//        CourseEditView()
 //    }
 //}
