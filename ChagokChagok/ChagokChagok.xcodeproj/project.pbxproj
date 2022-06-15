@@ -24,6 +24,7 @@
 		8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EF2854A92E0057C5FC /* PinEditView.swift */; };
 		8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7F52854BEF60057C5FC /* DataController.swift */; };
 		8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7FA2854D52C0057C5FC /* DateFormat.swift */; };
+		8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */; };
 		E60454A82856DF2B0050BC42 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60454A72856DF2B0050BC42 /* CategoryScroll.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		8C06B7EF2854A92E0057C5FC /* PinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEditView.swift; sourceTree = "<group>"; };
 		8C06B7F52854BEF60057C5FC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8C06B7FA2854D52C0057C5FC /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		E60454A72856DF2B0050BC42 /* CategoryScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8C06B7FA2854D52C0057C5FC /* DateFormat.swift */,
+				8C7E7A932856BED6001E3AAF /* FavoriteButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
 				8C06B7E92852DE610057C5FC /* Persistence.swift in Sources */,
 				8C06B7EC2852DEB40057C5FC /* CoreData.xcdatamodeld in Sources */,
+				8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
 				8C06B7F62854BEF60057C5FC /* DataController.swift in Sources */,

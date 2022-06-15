@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PinEditView: View {
+    @Environment(\.presentationMode) var presentation
     @Environment(\.managedObjectContext) private var viewContext
     
     var pin = Pin()
@@ -15,13 +16,47 @@ struct PinEditView: View {
     @State var textFieldMemo: String
     
     var body: some View {
-        HStack {
-            Text("제목")
-            TextField(pin.name!, text: $textFieldName)
-        }
-        HStack {
-            Text("메모")
-            TextField(pin.memo!, text: $textFieldMemo)
+        VStack {
+            HStack {
+                VStack {
+                    Circle()
+                        .foregroundColor(.gray)
+                        .frame(width: 80, height: 80, alignment: .leading)
+                    
+                    Text("풍경") // 추후 pin.category로 변경
+                        .font(.subheadline)
+                        
+                }.padding(.trailing)
+                
+                VStack {
+                    HStack {
+                        TextField(pin.name!, text: $textFieldName)
+                            .font(.title)
+                            .keyboardType(.default)
+                            .foregroundColor(.blue)
+                            
+                        Spacer()
+                    }.frame(height: 80)
+                    HStack {
+                        Text("경상북도 포항항 (좌표->주소)")
+                        Text("|")
+                            .foregroundColor(.secondary)
+                        Text(dateFormat.string(from: pin.date!))
+                        
+                        Spacer()
+                    }
+                    .font(.subheadline)
+                    .lineLimit(1)
+                }
+            }.padding()
+   
+            TextEditor(text: $textFieldMemo)
+                .frame(width: 350, height: 200, alignment: .topLeading)
+                .border(.gray, width: 1)
+                .cornerRadius(5)
+                .foregroundColor(.blue)
+            
+            Spacer()
         }
         .navigationTitle("편집")
         .navigationBarTitleDisplayMode(.inline)
@@ -40,6 +75,7 @@ struct PinEditView: View {
         withAnimation {
             pin.name = textFieldName
             pin.memo = textFieldMemo
+            self.presentation.wrappedValue.dismiss()
         }
         return()
     }
