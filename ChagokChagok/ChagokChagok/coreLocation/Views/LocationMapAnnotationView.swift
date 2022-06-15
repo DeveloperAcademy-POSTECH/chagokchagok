@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct LocationMapAnnotationView: View {
-    
     let accentColor = Color("AccentColor")
-    
     var body: some View {
         VStack(spacing: 0) {
             Image(systemName: "location.fill.viewfinder")
@@ -40,4 +38,3 @@ struct LocationMapAnnotationView_Previews: PreviewProvider {
         LocationMapAnnotationView()
     }
 }
-

@@ -9,18 +9,14 @@ import SwiftUI
 import MapKit
 
 struct LocationDetailView: View {
- 
     @EnvironmentObject private var vm: LocationsViewModel
     let location: Location
-    
     var body: some View {
-        
         ScrollView {
             VStack(alignment: .leading, spacing: 8) {
-                
                 basicInfo
                 Divider()
-                mapLayer
+                mapLayerDetail
                 Divider()
                 memoField
             }
@@ -31,9 +27,7 @@ struct LocationDetailView: View {
 }
     
 extension LocationDetailView {
-    
     private var basicInfo: some View {
-        
         HStack {
         VStack {
             Image("restaurant")
@@ -51,14 +45,13 @@ extension LocationDetailView {
                 Text("2022-06-13")
                     .padding()
             }
-            
             Image(systemName: "star")
                 .padding()
                 .offset(y: -30)
         }
     }
     
-    private var mapLayer: some View {
+    private var mapLayerDetail: some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(center: location.coordinates, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))),
             annotationItems: [location]) { location in MapAnnotation(coordinate: location.coordinates) {
             LocationMapAnnotationView()
@@ -72,7 +65,6 @@ extension LocationDetailView {
     }
     
     private var memoField: some View {
-        
         Rectangle()
             .frame(width: 330, height: 300)
             .foregroundColor(.white)
