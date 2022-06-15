@@ -247,6 +247,8 @@
 				CD943DA32858560A0076A794 /* LocationsData.swift */,
 			);
 			path = LocationData;
+			sourceTree = "<group>";
+		};
 		8CD1F3102859C47800E5C2DA /* CourseView */ = {
 			isa = PBXGroup;
 			children = (
