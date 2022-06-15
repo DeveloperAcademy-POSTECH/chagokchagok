@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+
     var body: some View {
-        ListCell(image: "tempPin", name: "멋진 동산", memo: "저기 진짜 맛있어보인다", createTime: "2022.03.12", type: "핀", isFavorite: true)
+        NavigationView {
+            MainView()
+                .padding(.top, 47)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Text("차곡차곡 🚙")
+                            .padding(EdgeInsets(top: 80, leading: 16, bottom: 16, trailing: 16))
+                            .font(.system(size: 26).weight(.semibold))
+                    }
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .padding(.all, 16)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
     }
 }
