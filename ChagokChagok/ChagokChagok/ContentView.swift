@@ -12,19 +12,17 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                NavigationLink(destination: {
-                    PinListView()
-                }, label: {
-                    Text("핀 뷰")
-                })
-                
-                NavigationLink(destination: {
-                    CourseListView()
-                }, label: {
-                    Text("코스 뷰")
-                })
-            }
+            MainView()
+                .padding(.top, 47)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Text("차곡차곡 🚙")
+                            .padding(EdgeInsets(top: 80, leading: 16, bottom: 16, trailing: 16))
+                            .font(.system(size: 26).weight(.semibold))
+                    }
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .padding(.all, 16)
         }
     }
 }
