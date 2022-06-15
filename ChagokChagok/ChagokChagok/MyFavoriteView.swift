@@ -12,7 +12,7 @@ struct MyFavoriteView: View {
         ScrollView {
             VStack {
                 ForEach(PinData.all(), id: \.self) { data in
-                    ListCell(data: data)
+                    ListCell()
                         .padding(.vertical, 8)
                     Divider()
                         .frame(width: 329, height: 1, alignment: .center)

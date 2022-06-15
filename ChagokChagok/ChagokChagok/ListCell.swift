@@ -1,7 +1,10 @@
 import SwiftUI
 
 struct ListCell: View {
-    @State var data: PinData
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    var data = Pin()
     
     var body: some View {
         HStack {
@@ -24,15 +27,15 @@ struct ListCell: View {
                 Image("tempTypeImage")
                     .resizable()
                     .frame(width: 13, height: 10, alignment: .leading)
-                Text(data.type == 1 ? "tempTypeImage" : "tmepTypeImage")
-                    .foregroundColor(.gray)
-                    .font(.system(size: 12))
+//                Text(data.type == 1 ? "tempTypeImage" : "tmepTypeImage")
+//                    .foregroundColor(.gray)
+//                    .font(.system(size: 12))
             }
             .frame(width: 40, height: 20)
-            Text(name ?? createTime)
+            Text(data.name ?? dateFormat.string(from: data.date!))
                 .listTitleStyle()
                 .listTextSpaceStyle()
-            Text(memo ?? "메모를 입력바랍니다아")
+            Text(data.memo ?? "메모를 입력바랍니다아")
                 .listMemoStyle()
                 .listMemoSpaceStyle()
         }
@@ -49,9 +52,9 @@ struct ListCell: View {
     
 }
 
-struct ListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ListCell(data: PinData.all().first!)
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct ListCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListCell(data: PinData.all().first!)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
