@@ -12,7 +12,8 @@ import CoreLocation
 class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     // Current region on map
-    @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.05, longitude: 129.35), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+    @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.05, longitude: 129.35),
+                                                                      span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     
     // set manager to CLLocationManager
     private let manager = CLLocationManager()

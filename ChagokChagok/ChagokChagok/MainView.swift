@@ -22,7 +22,7 @@ struct MainView: View {
     
     // TODO: 디자인 픽스되면 버튼 View로 변경 예정
     var driveStartBtn: some View {
-        NavigationLink(destination: EmptyView(), label: {
+        NavigationLink(destination: CountDownView(), label: {
             Image("tempDriveStart")
                 .resizable()
                 .frame(width: 222, height: 276)

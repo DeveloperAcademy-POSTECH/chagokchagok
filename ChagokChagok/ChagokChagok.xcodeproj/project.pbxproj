@@ -49,6 +49,8 @@
 		E6BFBAE328584CA5003CCC5A /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE228584CA5003CCC5A /* DummyData.swift */; };
 		E6BFBAE528587F5D003CCC5A /* UIcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE428587F5D003CCC5A /* UIcolors.swift */; };
 		E6BFBB27285A29F4003CCC5A /* MyCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */; };
+		E6BFBB37285B6C2F003CCC5A /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB36285B6C2F003CCC5A /* CountDownView.swift */; };
+		E6BFBB3B285B7862003CCC5A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB3A285B7862003CCC5A /* RecordingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +97,8 @@
 		E6BFBAE228584CA5003CCC5A /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		E6BFBAE428587F5D003CCC5A /* UIcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolors.swift; sourceTree = "<group>"; };
 		E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseListView.swift; sourceTree = "<group>"; };
+		E6BFBB36285B6C2F003CCC5A /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
+		E6BFBB3A285B7862003CCC5A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 				E6BFBAE228584CA5003CCC5A /* DummyData.swift */,
 				3870D853285705B00067F44A /* MainView.swift */,
 				3870D8552857155A0067F44A /* RecentRecord.swift */,
+				E6BFBB36285B6C2F003CCC5A /* CountDownView.swift */,
+				E6BFBB3A285B7862003CCC5A /* RecordingView.swift */,
 				3870D85D2857970F0067F44A /* MyFavoriteView.swift */,
 				3870D8842859F3A90067F44A /* CategoryScroll.swift */,
 				3870D8862859F6BD0067F44A /* CategoryData.swift */,
@@ -372,6 +378,7 @@
 				3870D85C28575B5B0067F44A /* ViewStyle.swift in Sources */,
 				3870D85E2857970F0067F44A /* MyFavoriteView.swift in Sources */,
 				8CD1F3172859C47800E5C2DA /* CourseListView.swift in Sources */,
+				E6BFBB37285B6C2F003CCC5A /* CountDownView.swift in Sources */,
 				8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */,
 				8CD1F31F2859C58900E5C2DA /* FavoriteButtonForPin.swift in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
@@ -389,6 +396,7 @@
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
 				3870D8562857155A0067F44A /* RecentRecord.swift in Sources */,
 				E6BFBB27285A29F4003CCC5A /* MyCourseListView.swift in Sources */,
+				E6BFBB3B285B7862003CCC5A /* RecordingView.swift in Sources */,
 				3870D85A285757210067F44A /* ImageStyle.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
 				8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */,
