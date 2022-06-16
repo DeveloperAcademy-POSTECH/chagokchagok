@@ -48,6 +48,7 @@
 		E6BFBAE128583594003CCC5A /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE028583594003CCC5A /* FilteredList.swift */; };
 		E6BFBAE328584CA5003CCC5A /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE228584CA5003CCC5A /* DummyData.swift */; };
 		E6BFBAE528587F5D003CCC5A /* UIcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE428587F5D003CCC5A /* UIcolors.swift */; };
+		E6BFBB27285A29F4003CCC5A /* MyCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		E6BFBAE028583594003CCC5A /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		E6BFBAE228584CA5003CCC5A /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		E6BFBAE428587F5D003CCC5A /* UIcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolors.swift; sourceTree = "<group>"; };
+		E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				38A8DC622850B8E7007095B5 /* Preview Content */,
 				38BBD8732852D7C400158D5A /* ListCell.swift */,
 				E6BFBAE028583594003CCC5A /* FilteredList.swift */,
+				E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */,
 				E6BFBAE228584CA5003CCC5A /* DummyData.swift */,
 				3870D853285705B00067F44A /* MainView.swift */,
 				3870D8552857155A0067F44A /* RecentRecord.swift */,
@@ -385,6 +388,7 @@
 				3870D854285705B00067F44A /* MainView.swift in Sources */,
 				38A8DC5D2850B8E6007095B5 /* ChagokChagokApp.swift in Sources */,
 				3870D8562857155A0067F44A /* RecentRecord.swift in Sources */,
+				E6BFBB27285A29F4003CCC5A /* MyCourseListView.swift in Sources */,
 				3870D85A285757210067F44A /* ImageStyle.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
 				8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */,
