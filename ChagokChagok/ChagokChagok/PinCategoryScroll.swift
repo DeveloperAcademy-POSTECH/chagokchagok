@@ -1,20 +1,26 @@
+//
+//  PinCategoryScroll.swift
+//  ChagokChagok
+//
+//  Created by 윤가희 on 2022/06/16.
+//
 import SwiftUI
 
-struct CategoryScroll: View {
-    @Binding var selectedCategory: [CourseCategory.RawValue]
+struct PinCategoryScroll: View {
+    @Binding var selectedCategory: [PinCategory.RawValue]
     
     var body: some View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8.0) {
-                    ForEach(CourseCategory.allCases, id: \.self) { item in
-                        CategoryList(item: item.rawValue, selected: $selectedCategory)
+                    ForEach(PinCategory.allCases, id: \.self) { item in
+                        PinCategoryList(item: item.rawValue, selected: $selectedCategory)
                     }
                 }
             }
     }
 }
 
-struct CategoryList: View {
+struct PinCategoryList: View {
     let item: String
     @Binding var selected: [String]
     
