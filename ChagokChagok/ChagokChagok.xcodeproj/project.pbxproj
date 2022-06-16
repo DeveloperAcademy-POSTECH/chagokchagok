@@ -50,6 +50,8 @@
 		E6BFBB27285A29F4003CCC5A /* MyCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */; };
 		E6BFBB29285ACD78003CCC5A /* MyPinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB28285ACD78003CCC5A /* MyPinListView.swift */; };
 		E6BFBB31285ADD89003CCC5A /* PinCategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB30285ADD89003CCC5A /* PinCategoryScroll.swift */; };
+		E6BFBB45285B9D0F003CCC5A /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB44285B9D0F003CCC5A /* CountDownView.swift */; };
+		E6BFBB47285B9D1B003CCC5A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB46285B9D1B003CCC5A /* RecordingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,8 @@
 		E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseListView.swift; sourceTree = "<group>"; };
 		E6BFBB28285ACD78003CCC5A /* MyPinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPinListView.swift; sourceTree = "<group>"; };
 		E6BFBB30285ADD89003CCC5A /* PinCategoryScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCategoryScroll.swift; sourceTree = "<group>"; };
+		E6BFBB44285B9D0F003CCC5A /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
+		E6BFBB46285B9D1B003CCC5A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 				38BBD8732852D7C400158D5A /* ListCell.swift */,
 				E6BFBAE028583594003CCC5A /* FilteredList.swift */,
 				E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */,
+				E6BFBB44285B9D0F003CCC5A /* CountDownView.swift */,
+				E6BFBB46285B9D1B003CCC5A /* RecordingView.swift */,
 				E6BFBB28285ACD78003CCC5A /* MyPinListView.swift */,
 				E6BFBAE228584CA5003CCC5A /* DummyData.swift */,
 				3870D853285705B00067F44A /* MainView.swift */,
@@ -373,6 +379,7 @@
 				CD943D9F285855390076A794 /* LocationMapAnnotationView.swift in Sources */,
 				E6BFBAE528587F5D003CCC5A /* UIcolors.swift in Sources */,
 				3870D860285797700067F44A /* Data.swift in Sources */,
+				E6BFBB45285B9D0F003CCC5A /* CountDownView.swift in Sources */,
 				3870D85C28575B5B0067F44A /* ViewStyle.swift in Sources */,
 				3870D85E2857970F0067F44A /* MyFavoriteView.swift in Sources */,
 				8CD1F3172859C47800E5C2DA /* CourseListView.swift in Sources */,
@@ -394,6 +401,7 @@
 				3870D8562857155A0067F44A /* RecentRecord.swift in Sources */,
 				E6BFBB27285A29F4003CCC5A /* MyCourseListView.swift in Sources */,
 				3870D85A285757210067F44A /* ImageStyle.swift in Sources */,
+				E6BFBB47285B9D1B003CCC5A /* RecordingView.swift in Sources */,
 				8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */,
 				8C06B7FB2854D52C0057C5FC /* DateFormat.swift in Sources */,
 				E6BFBAE328584CA5003CCC5A /* DummyData.swift in Sources */,
