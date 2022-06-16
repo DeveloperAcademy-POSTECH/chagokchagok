@@ -10,16 +10,21 @@ import CoreLocation
 
 struct Location: Identifiable, Equatable {
     var id = UUID()
-    let name: String
-    let symbol: String
-    let coordinates: CLLocationCoordinate2D
-    let description: String
-    let imageNames: [String]
+    var name: String
+    var category: String
+    var date: Date
+    var latitude: Double
+    var longitude: Double
+//    var coordinates: CLLocationCoordinate2D
+    var memo: String?
+    var map: String?
+    var isEdited: Bool = false
+    var isFavorite: Bool = false
     
     // Equatable
     static func == (lhs: Location, rhs: Location) -> Bool {
         lhs.id == rhs.id
     }
     
-    static let empty: Location = Location(id: UUID(), name: "", symbol: "", coordinates: .init(latitude: .infinity, longitude: .infinity), description: "", imageNames: [])
+    static let empty: Location = Location(id: UUID(), name: "", category: "", date: Date.now, latitude: 0, longitude: 0, memo: "")
 }
