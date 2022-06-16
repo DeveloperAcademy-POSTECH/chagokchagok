@@ -49,6 +49,7 @@
 		E6BFBAE328584CA5003CCC5A /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE228584CA5003CCC5A /* DummyData.swift */; };
 		E6BFBAE528587F5D003CCC5A /* UIcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE428587F5D003CCC5A /* UIcolors.swift */; };
 		E6BFBB27285A29F4003CCC5A /* MyCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */; };
+		E6BFBB29285ACD78003CCC5A /* MyPinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB28285ACD78003CCC5A /* MyPinListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		E6BFBAE228584CA5003CCC5A /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		E6BFBAE428587F5D003CCC5A /* UIcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolors.swift; sourceTree = "<group>"; };
 		E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseListView.swift; sourceTree = "<group>"; };
+		E6BFBB28285ACD78003CCC5A /* MyPinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPinListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				38BBD8732852D7C400158D5A /* ListCell.swift */,
 				E6BFBAE028583594003CCC5A /* FilteredList.swift */,
 				E6BFBB26285A29F4003CCC5A /* MyCourseListView.swift */,
+				E6BFBB28285ACD78003CCC5A /* MyPinListView.swift */,
 				E6BFBAE228584CA5003CCC5A /* DummyData.swift */,
 				3870D853285705B00067F44A /* MainView.swift */,
 				3870D8552857155A0067F44A /* RecentRecord.swift */,
@@ -364,6 +367,7 @@
 				8CD1F30F2859C45900E5C2DA /* LocalDataTest.xcdatamodeld in Sources */,
 				38BBD8742852D7C400158D5A /* ListCell.swift in Sources */,
 				CD943D92285849B70076A794 /* Location.swift in Sources */,
+				E6BFBB29285ACD78003CCC5A /* MyPinListView.swift in Sources */,
 				CD943D9D285854960076A794 /* LocationPreviewView.swift in Sources */,
 				E6BFBAE128583594003CCC5A /* FilteredList.swift in Sources */,
 				CD943D9F285855390076A794 /* LocationMapAnnotationView.swift in Sources */,
