@@ -38,7 +38,7 @@ struct MainView: View {
     }
     
     var myCourseBtn: some View {
-        NavigationLink(destination: EmptyView(), label: {
+        NavigationLink(destination: MyCourseListView(), label: {
             Image("tempMyCourse")
                 .resizable()
                 .frame(width: 171, height: 130)
