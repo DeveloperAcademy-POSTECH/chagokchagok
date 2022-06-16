@@ -13,7 +13,6 @@ struct LocationsView: View {
     @StateObject private var lm = LocationManager()
     
     var body: some View {
-        NavigationView {
             ZStack {
                 mapLayer
                 
@@ -26,7 +25,6 @@ struct LocationsView: View {
                 }
             }
             .ignoresSafeArea()
-        }
     }
     
     func blink() {
@@ -53,7 +51,7 @@ extension LocationsView {
         Map(coordinateRegion: $lm.mapRegion,
             showsUserLocation: true,
             annotationItems: vm.locations,
-            annotationContent: { location in MapAnnotation(coordinate: location.coordinates) {
+            annotationContent: { location in MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
 
             LocationMapAnnotationView()
                 .scaleEffect(vm.mapLocation == location ? 1.1 : 0.8)

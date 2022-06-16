@@ -28,7 +28,7 @@ struct LocationPreviewView: View {
 extension LocationPreviewView {
     private var imageSection: some View {
         ZStack {
-            if let imageName = location.imageNames.first {
+            if let imageName = location.category {
                 Image(imageName)
                     .resizable()
                     .scaledToFill()
@@ -46,7 +46,7 @@ extension LocationPreviewView {
                 .font(.title2)
                 .fontWeight(.bold)
             
-            Text(location.symbol)
+            Text(location.category)
                 .font(.subheadline)
         }.padding()
     }

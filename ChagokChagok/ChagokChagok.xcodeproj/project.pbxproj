@@ -43,7 +43,6 @@
 		CD943D9B28584C2C0076A794 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9A28584C2C0076A794 /* LocationsListView.swift */; };
 		CD943D9D285854960076A794 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9C285854960076A794 /* LocationPreviewView.swift */; };
 		CD943D9F285855390076A794 /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943D9E285855390076A794 /* LocationMapAnnotationView.swift */; };
-		CD943DA1285855860076A794 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943DA0285855860076A794 /* LocationDetailView.swift */; };
 		CD943DA42858560A0076A794 /* LocationsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD943DA32858560A0076A794 /* LocationsData.swift */; };
 		E6BFBAE128583594003CCC5A /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE028583594003CCC5A /* FilteredList.swift */; };
 		E6BFBAE328584CA5003CCC5A /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBAE228584CA5003CCC5A /* DummyData.swift */; };
@@ -89,7 +88,6 @@
 		CD943D9A28584C2C0076A794 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		CD943D9C285854960076A794 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		CD943D9E285855390076A794 /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
-		CD943DA0285855860076A794 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		CD943DA32858560A0076A794 /* LocationsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsData.swift; sourceTree = "<group>"; };
 		E6BFBAE028583594003CCC5A /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		E6BFBAE228584CA5003CCC5A /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
@@ -233,7 +231,7 @@
 		CD943D9628584B420076A794 /* coreLocation */ = {
 			isa = PBXGroup;
 			children = (
-				CD943DA2285855E60076A794 /* LocationData */,
+				CD943DA2285855E60076A794 /* LocationsData */,
 				CD943D9728584B610076A794 /* Views */,
 				CD943D90285849900076A794 /* Models */,
 				CD943D9328584A520076A794 /* ViewModels */,
@@ -248,17 +246,16 @@
 				CD943D9A28584C2C0076A794 /* LocationsListView.swift */,
 				CD943D9C285854960076A794 /* LocationPreviewView.swift */,
 				CD943D9E285855390076A794 /* LocationMapAnnotationView.swift */,
-				CD943DA0285855860076A794 /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CD943DA2285855E60076A794 /* LocationData */ = {
+		CD943DA2285855E60076A794 /* LocationsData */ = {
 			isa = PBXGroup;
 			children = (
 				CD943DA32858560A0076A794 /* LocationsData.swift */,
 			);
-			path = LocationData;
+			path = LocationsData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +378,6 @@
 				3870D8892859F7030067F44A /* SelectCourseCategoryView.swift in Sources */,
 				CD943D9528584A820076A794 /* LocationsViewModel.swift in Sources */,
 				CD943DA42858560A0076A794 /* LocationsData.swift in Sources */,
-				CD943DA1285855860076A794 /* LocationDetailView.swift in Sources */,
 				8CD1F31D2859C58300E5C2DA /* FavoriteButtonForCourse.swift in Sources */,
 				3870D858285752B60067F44A /* TextStyle.swift in Sources */,
 				3870D8872859F6BD0067F44A /* CategoryData.swift in Sources */,
@@ -521,9 +517,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChagokChagok/Preview Content\"";
-				DEVELOPMENT_TEAM = 82DRSFKFS9;
+				DEVELOPMENT_TEAM = B9HX5RRRUK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Location info is using for your app service";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Do you really want to allow your location info?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,9 +548,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChagokChagok/Preview Content\"";
-				DEVELOPMENT_TEAM = 82DRSFKFS9;
+				DEVELOPMENT_TEAM = B9HX5RRRUK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Location info is using for your app service";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Do you really want to allow your location info?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

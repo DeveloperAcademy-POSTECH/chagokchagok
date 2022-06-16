@@ -46,7 +46,7 @@ struct MainView: View {
     }
     
     var myPinBtn: some View {
-        NavigationLink(destination: EmptyView(), label: {
+        NavigationLink(destination: LocationsView(), label: {
             Image("tempMyPin")
                 .resizable()
                 .frame(width: 171, height: 130)
