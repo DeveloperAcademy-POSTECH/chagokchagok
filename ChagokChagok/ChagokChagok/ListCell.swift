@@ -1,55 +1,60 @@
 import SwiftUI
 
 struct ListCell: View {
-    var image: String
-    var name: String?
-    var memo: String?
-    var createTime: String
-    var type: String
-    var isFavorite: Bool
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    var data = Pin()
     
     var body: some View {
         HStack {
-            Image(image)
-                .resizable()
-                .frame(width: 92, height: 92)
-                .clipShape(Circle())
-            VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Image("tempTypeImage")
-                        .resizable()
-                        .frame(width: 13, height: 10, alignment: .leading)
-                    Text(type)
-                        .foregroundColor(.gray)
-                        .font(.system(size: 12))
-                }
-                .frame(width: 40, height: 20)
-                Text(name != nil ? name! : createTime)
-                    .bold()
-                    .font(.system(size: 18))
-                    .padding(.bottom, 5)
-                Text(memo != nil ? "\(memo!)" : "메모를 입력해주세요.")
-                    .font(.system(size: 14))
-                    .lineLimit(1)
-            }
+            listImage
+            listText
             Spacer()
-            VStack {
-                Image(systemName: isFavorite ? "heart.fill" : "heart")
-                    .frame(width: 20, height: 20, alignment: .topTrailing)
-                    .padding(.top, 5)
-//                    .onTapGesture {
-//                        isFavorite.toggle()
-//                    }
-                Spacer()
-            }
+            isfavoriteBtn
         }
         .frame(width: 350, height: 92)
     }
+    
+    var listImage: some View {
+        Image(data.category ?? "tempCategoryimage")
+            .listIconStyle()
+    }
+    
+    var listText: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                Image("tempTypeImage")
+                    .resizable()
+                    .frame(width: 13, height: 10, alignment: .leading)
+//                Text(data.type == 1 ? "tempTypeImage" : "tmepTypeImage")
+//                    .foregroundColor(.gray)
+//                    .font(.system(size: 12))
+            }
+            .frame(width: 40, height: 20)
+            Text(data.name ?? dateFormat.string(from: data.date!))
+                .listTitleStyle()
+                .listTextSpaceStyle()
+            Text(data.memo ?? "메모를 입력바랍니다아")
+                .listMemoStyle()
+                .listMemoSpaceStyle()
+        }
+    }
+    
+    var isfavoriteBtn: some View {
+        VStack {
+            Image(systemName: data.isFavorite ? "heart.fill" : "heart")
+                .frame(width: 20, height: 20, alignment: .topTrailing)
+                .padding(.top, 5)
+            Spacer()
+        }
+    }
+    
 }
 
-struct ListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ListCell(image: "tempPin", name: "멋진 동산", memo: "저기 진짜 맛있어보인다", createTime: "2022.03.12", type: "핀", isFavorite: true)
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct ListCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListCell(data: PinData.all().first!)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

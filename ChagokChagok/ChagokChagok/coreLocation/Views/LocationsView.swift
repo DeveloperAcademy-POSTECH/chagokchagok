@@ -50,7 +50,6 @@ extension LocationsView {
     }
     
     private var mapLayer: some View {
-        
         Map(coordinateRegion: $lm.mapRegion,
             showsUserLocation: true,
             annotationItems: vm.locations,

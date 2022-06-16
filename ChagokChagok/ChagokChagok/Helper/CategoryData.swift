@@ -1,11 +1,5 @@
-//
-//  CategoryData.swift
-//  ChagokChagok
-//
-//  Created by LeeJiSoo on 2022/06/15.
-//
-
 import SwiftUI
+
 extension Image {
     static let cityImage: Image = Image("tempCategoryimage")
     static let beachImgae: Image = Image("tempCategoryimage")

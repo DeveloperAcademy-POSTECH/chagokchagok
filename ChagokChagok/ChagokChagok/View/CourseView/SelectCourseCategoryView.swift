@@ -1,15 +1,8 @@
-//
-//  SelectPinCategoryView.swift
-//  ChagokChagok
-//
-//  Created by LeeJiSoo on 2022/06/15.
-//
-
 import SwiftUI
 
-struct SelectPinCategoryView: View {
+struct SelectCourseCategoryView: View {
     // TODO: 해당 pin/course 가 어떤 카테고린지 받아와야함
-    @State var currentCategory = PinCategory.cafe.rawValue
+    @State var currentCategory = CourseCategory.city.rawValue
     let column = [GridItem(.adaptive(minimum: 100))]
     
     var body: some View {
@@ -20,7 +13,7 @@ struct SelectPinCategoryView: View {
     
     private func selectCategoryImage() -> some View {
         LazyVGrid(columns: column, spacing: 10) {
-            ForEach(PinCategory.allCases, id: \.rawValue) { value in
+            ForEach(CourseCategory.allCases, id: \.rawValue) { value in
                 Button(action: {
                     currentCategory = value.rawValue
                     // action
@@ -57,8 +50,8 @@ struct SelectPinCategoryView: View {
     }
 }
 
-struct SelectPinCategoryView_Previews: PreviewProvider {
+struct SelectCourseCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectPinCategoryView()
+        SelectCourseCategoryView()
     }
 }

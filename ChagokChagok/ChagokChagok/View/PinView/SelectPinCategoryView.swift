@@ -1,10 +1,3 @@
-//
-//  SelectPinCategoryView.swift
-//  ChagokChagok
-//
-//  Created by LeeJiSoo on 2022/06/15.
-//
-
 import SwiftUI
 
 struct SelectPinCategoryView: View {
