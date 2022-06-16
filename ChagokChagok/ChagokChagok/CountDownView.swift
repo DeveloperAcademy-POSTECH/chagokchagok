@@ -11,7 +11,7 @@ struct CountDownView: View {
     @State private var isActive = true
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    @State private var showing = false
+    @State private var showAlert = false
     
     var body: some View {
         ZStack {
@@ -26,6 +26,8 @@ struct CountDownView: View {
                     .foregroundColor(.mainBlue)
                     .padding(.top, 76)
                 Button(action: {
+                    showAlert = true
+                    isActive = false
                 }, label: {
                     Text("드라이브 취소")
                         .font(.system(size: 20, weight: .bold))
@@ -34,15 +36,14 @@ struct CountDownView: View {
                         .background(Color.mainBlue)
                         .clipShape(Capsule())
                 })
-                /* MARK: 취소 버튼 눌렀을 시 실행취소/취소 alert 구현하려 합니다
-                .alert("메시지", isPresented: $showing) {
-                    Button("실행취소", role: .cancel) {
-                        
+                .alert("드라이브를 취소하시겠습니까?", isPresented: $showAlert) {
+                    Button("취소") {
+                        // TODO: ContentView로 가기
                     }
-                    Button("취소", role: .cancel) {
+                    Button("돌아가기", role: .cancel) {
+                        isActive = true
                     }
                 }
-                */
                 Spacer()
             }
             .ignoresSafeArea()
