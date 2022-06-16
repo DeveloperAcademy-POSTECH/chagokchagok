@@ -21,7 +21,7 @@ struct MyPinListView: View {
             }
             .padding(EdgeInsets(top: 60.0, leading: 20.0, bottom: 0, trailing: 0))
             .frame(maxWidth: .infinity, alignment: .leading)
-            CategoryScroll(selectedCategory: $selectedCategory)
+            PinCategoryScroll(selectedCategory: $selectedCategory)
                 .padding(EdgeInsets(top: 33.0, leading: 20.0, bottom: 0, trailing: 0))
             Text("Total ")
                 .font(.system(size: 14, weight: .regular))

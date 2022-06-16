@@ -1,20 +1,20 @@
 import SwiftUI
 
-struct CategoryScroll: View {
+struct CourseCategoryScroll: View {
     @Binding var selectedCategory: [CourseCategory.RawValue]
     
     var body: some View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8.0) {
                     ForEach(CourseCategory.allCases, id: \.self) { item in
-                        CategoryList(item: item.rawValue, selected: $selectedCategory)
+                        CourseCategoryList(item: item.rawValue, selected: $selectedCategory)
                     }
                 }
             }
     }
 }
 
-struct CategoryList: View {
+struct CourseCategoryList: View {
     let item: String
     @Binding var selected: [String]
     
