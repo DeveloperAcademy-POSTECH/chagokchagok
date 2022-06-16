@@ -2,25 +2,22 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        NavigationView{
-            VStack {
-                HStack {
-                    driveStartBtn
-                    myFavoriteBtn
-                }
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
-                
-                HStack {
-                    myCourseBtn
-                    myPinBtn
-                }
-                .padding(.horizontal, 16)
-                RecentRecord(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.03.12", type: "핀", isFavorite: true)
-                    .padding()
-                Spacer()
+        VStack {
+            HStack {
+                driveStartBtn
+                myFavoriteBtn
             }
+            .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
+            
+            HStack {
+                myCourseBtn
+                myPinBtn
+            }
+            .padding(.horizontal, 16)
+            RecentRecord(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.03.12", type: "핀", isFavorite: true)
+                .padding()
+            Spacer()
         }
-        .navigationBarHidden(true)
     }
     
     // TODO: 디자인 픽스되면 버튼 View로 변경 예정
@@ -41,7 +38,7 @@ struct MainView: View {
     }
     
     var myCourseBtn: some View {
-        NavigationLink(destination: MyCourseListView(), label: {
+        NavigationLink(destination: EmptyView(), label: {
             Image("tempMyCourse")
                 .resizable()
                 .frame(width: 171, height: 130)
