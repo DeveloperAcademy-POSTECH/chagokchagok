@@ -15,9 +15,13 @@ struct LocationDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 8) {
                 basicInfo
+                
                 Divider()
+                
                 mapLayerDetail
+                
                 Divider()
+                
                 memoField
             }
         }
@@ -34,14 +38,18 @@ extension LocationDetailView {
             .resizable()
             .frame(width: 100, height: 100)
             .padding()
+            
             Text("식당")
                 .padding()
         }
             VStack {
                 Spacer()
+                
                 Text("제목을 입력하세요")
                     .padding()
+                
                 Spacer()
+                
                 Text("2022-06-13")
                     .padding()
             }
