@@ -21,12 +21,8 @@ struct RecordingView: View {
                 Button(action: {
                     firstNaviLinkActive = false
                 }, label: {
-                    Text("드라이브 종료")
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.white)
-                        .padding(EdgeInsets(top: 20, leading: 45, bottom: 16, trailing: 45))
-                        .background(Color.mainBlue)
-                        .clipShape(Capsule())
+                    Image("DriveDone")
+                        .padding(.top, 55.0)
                 })
                 Spacer()
             }
