@@ -106,9 +106,3 @@ struct PinEditView: View {
         }
     }
 }
-
-//struct PinEditView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PinEditView()
-//    }
-//}

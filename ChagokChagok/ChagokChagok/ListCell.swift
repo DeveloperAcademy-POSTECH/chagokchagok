@@ -4,11 +4,7 @@ struct ListCell: View {
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)],
         animation: .default) private var pins: FetchedResults<Pin>
     
-    @FetchRequest(entity: Course.entity(), sortDescriptors: [],
-        animation: .default) private var courses: FetchedResults<Course>
-    
     var pin = Pin()
-    var course = Course()
         
     var body: some View {
 

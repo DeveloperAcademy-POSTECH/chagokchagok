@@ -10,6 +10,7 @@ import SwiftUI
 struct CourseListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
+    
     @State private var selectedCategory: [String] = []
 
     @FetchRequest(entity: Course.entity(), sortDescriptors: [],
@@ -55,6 +56,7 @@ struct CourseListView: View {
                         }
                     }
                 }
+                .listStyle(.plain)
             }
             Spacer()
         }

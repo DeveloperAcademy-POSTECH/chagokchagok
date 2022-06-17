@@ -20,26 +20,14 @@ struct LocationsView: View {
     var body: some View {
             ZStack {
                 mapLayer
-                
                 VStack(spacing: 0) {
                     Spacer()
                     pinList
                     locationsPreviewStack.padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
-//                    Button(action: blink) {
-//                        locationsPreviewStack.padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
-//                    }
                 }
             }
             .ignoresSafeArea()
     }
-    
-//    func blink() {
-//        NavigationLink(destination: {
-//            PinDetailView(pin: pin)
-//        }, label: {
-//
-//        })
-//    }
 }
 
 extension LocationsView {
