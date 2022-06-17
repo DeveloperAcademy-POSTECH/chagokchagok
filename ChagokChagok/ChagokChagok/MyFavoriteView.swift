@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct MyFavoriteView: View {
+    
+    
     var body: some View {
         VStack {
             myFavoriteCount()

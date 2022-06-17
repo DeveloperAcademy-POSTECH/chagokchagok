@@ -9,9 +9,9 @@ import SwiftUI
 
 struct PinListView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
-    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)],
-        animation: .default) private var pins: FetchedResults<Pin>
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)], animation: .default) private var pins: FetchedResults<Pin>
+        
+    @State private var selectedCategory: [String] = []
     
     var body: some View {
         VStack {
@@ -20,18 +20,41 @@ struct PinListView: View {
             }
             .buttonStyle(.borderedProminent)
             
-            List {
-                ForEach(pins) { pin in
-                    NavigationLink {
-                        PinDetailView(pin: pin)
-                    } label: {
-                        ListCell()
+            PinCategoryScroll(selectedCategory: $selectedCategory)
+                .padding(EdgeInsets(top: 33.0, leading: 20.0, bottom: 0, trailing: 0))
+            Text("Total ")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(Color.black)
+                .opacity(0.6)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(EdgeInsets(top: 24.0, leading: 20.0, bottom: 0, trailing: 0))
+            
+            if selectedCategory.isEmpty {
+                List {
+                    ForEach(pins) { pin in
+                        NavigationLink {
+                            PinDetailView(pin: pin)
+                        } label: {
+                            ListCell(pin: pin)
+                        }
+                    }
+                    .onDelete(perform: deletePins)
+                }
+                .listStyle(.plain)
+            } else {
+                List {
+                    ForEach(pins) { pin in
+                        if selectedCategory.contains(pin.category ?? "") {
+                            NavigationLink {
+                                PinDetailView(pin: pin)
+                            } label: {
+                                ListCell(pin: pin)
+                            }
+                        }
                     }
                 }
-                .onDelete(perform: deletePins)
+                .listStyle(.plain)
             }
-            .listStyle(.plain)
-            
             Spacer()
         }
     }
@@ -41,11 +64,10 @@ struct PinListView: View {
             let newPin = Pin(context: viewContext)
             newPin.id = UUID()
             newPin.date = Date()
-            newPin.longitude = 39.000
-            newPin.latitude = 120.000
+            newPin.latitude = 36.0189315
+            newPin.longitude = 129.3429384
             newPin.isFavorite = false
             newPin.isEdited = false
-
 
             do {
                 try viewContext.save()

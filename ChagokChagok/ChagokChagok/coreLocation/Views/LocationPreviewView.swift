@@ -9,7 +9,12 @@ import SwiftUI
 
 struct LocationPreviewView: View {
     @EnvironmentObject private var vm: LocationsViewModel
-    let location: Location
+    
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [],
+        animation: .default) private var pins: FetchedResults<Pin>
+
+    var pin = Pin()
+
     var body: some View {
         HStack(spacing: 24) {
             imageSection
@@ -28,7 +33,7 @@ struct LocationPreviewView: View {
 extension LocationPreviewView {
     private var imageSection: some View {
         ZStack {
-            if let imageName = location.category {
+            if let imageName = "맛집" {
                 Image(imageName)
                     .resizable()
                     .scaledToFill()
@@ -42,24 +47,26 @@ extension LocationPreviewView {
     
     private var titleSection: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(location.name)
+            Text(pin.name ?? "나의 핀")
                 .font(.title2)
                 .fontWeight(.bold)
+                .lineLimit(1)
             
-            Text(location.category)
+            Text(pin.memo ?? "")
                 .font(.subheadline)
+                .lineLimit(1)
         }.padding()
     }
 }
 
-struct LocationPreviewView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Color.white.ignoresSafeArea()
-            
-            LocationPreviewView(location: LocationsDataService.locations.first!)
-                .padding()
-        }
-        .environmentObject(LocationsViewModel())
-    }
-}
+//struct LocationPreviewView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ZStack {
+//            Color.white.ignoresSafeArea()
+//            
+//            LocationPreviewView(location: LocationsDataService.locations.first!)
+//                .padding()
+//        }
+//        .environmentObject(LocationsViewModel())
+//    }
+//}

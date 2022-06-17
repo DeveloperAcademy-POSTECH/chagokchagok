@@ -13,17 +13,17 @@ struct FilteredList: View {
         }
         */
         if selectedCategory.isEmpty {
-            List(self.contentsList, id: \.name) {content in
-                GroupBox(label: Text(content.name ?? "defaultName"), content: {
+            List(contentsList, id: \.name) {pin in
+                GroupBox(label: Text(pin.name ?? "defaultName"), content: {
                     Text("Dtesting")
                         .frame(width: 100, height: 100)
                         .background(.blue)
                 })
             }
         } else {
-            List(self.contentsList, id: \.name) { content in
-                if selectedCategory.contains(content.category ?? "nil") {
-                    GroupBox(label: Text(content.name ?? "defaultName"), content: {
+            List(contentsList, id: \.name) { pin in
+                if selectedCategory.contains(pin.category ?? "nil") {
+                    GroupBox(label: Text(pin.name ?? "defaultName"), content: {
                         Text("testing")
                             .frame(width: 100, height: 100)
                             .background(.blue)

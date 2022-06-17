@@ -1,20 +1,31 @@
-//
-//  SelectPinCategoryView.swift
-//  ChagokChagok
-//
-//  Created by LeeJiSoo on 2022/06/15.
-//
-
 import SwiftUI
 
 struct SelectPinCategoryView: View {
+    @Environment(\.presentationMode) var presentation
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [],
+        animation: .default) private var pins: FetchedResults<Pin>
+    
+    var pin = Pin()
+    
     // TODO: 해당 pin/course 가 어떤 카테고린지 받아와야함
-    @State var currentCategory = PinCategory.cafe.rawValue
+    @State var currentCategory: String
+
     let column = [GridItem(.adaptive(minimum: 100))]
     
     var body: some View {
         VStack {
             selectCategoryImage()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    updatePinCategory()
+                } label: {
+                    Text("저장")
+                }
+            }
         }
     }
     
@@ -23,7 +34,6 @@ struct SelectPinCategoryView: View {
             ForEach(PinCategory.allCases, id: \.rawValue) { value in
                 Button(action: {
                     currentCategory = value.rawValue
-                    // action
                 }, label: {
                     VStack {
                         Group {
@@ -55,10 +65,25 @@ struct SelectPinCategoryView: View {
             .font(.system(size: 18))
             .foregroundColor(self.currentCategory == value ? .blue : .black)
     }
-}
+    
+    private func updatePinCategory() {
+        withAnimation {
+            pin.category = currentCategory
 
-struct SelectPinCategoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectPinCategoryView()
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+            
+            self.presentation.wrappedValue.dismiss()
+        }
     }
 }
+
+//struct SelectPinCategoryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SelectPinCategoryView()
+//    }
+//}

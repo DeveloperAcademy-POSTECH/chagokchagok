@@ -18,48 +18,44 @@ struct CourseDetailView: View {
     var body: some View {
         VStack {
             HStack {
-                VStack {
-                    Circle()
+                Circle()
+                    .foregroundColor(.gray)
+                    .frame(width: 76, height: 76, alignment: .leading)
+                
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(dateFormat.string(from: course.date ?? Date()))
+                        .font(.system(size: 15))
                         .foregroundColor(.gray)
-                        .frame(width: 76, height: 76, alignment: .leading)
-                }.padding(.trailing)
 
-                VStack {
-                    VStack {
-                        Text(dateFormat.string(from: course.date ?? Date()))
-                            .font(.system(size: 15))
-
-                        Text(course.name ?? "")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.5)
-                        
-                        Spacer()
-                    }.frame(height: 80)
-                    
-                    HStack {
-                        Text("경상북도 포항항 (좌표->주소)")
-                        Text("|")
-                            .foregroundColor(.secondary)
-                        Text(dateFormat.string(from: course.date ?? Date()))
-                        
-                        Spacer()
-                    }
-                    .font(.caption)
-                    .lineLimit(1)
+                    Text(course.name ?? "제목을 써주세요")
+                        .font(.system(size: 22))
+                        .fontWeight(.bold)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                 }
+                .padding(.leading, 24)
+                
+                Spacer()
             }
-            .padding()
+            .frame(width: 350, height: 80, alignment: .leading)
+            .padding(.top, 45)
             
-            Rectangle() // 지도 들어갈 자리
-                .frame(height: 300)
-                .padding(.horizontal)
+//            Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude),
+//        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))), interactionModes: .all, showsUserLocation: true, annotationItems: pins, annotationContent: { pin in
+//                MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude)) {
+//                    Image(systemName: "mappin")
+//                        .foregroundColor(.pink)
+//                }
+//            })
+//                .frame(width: 350, height: 350)
+//                .cornerRadius(14)
+//                .padding(22)
             
             Text(course.memo ?? "내용 없음")
-                .frame(width: 360, height: 100, alignment: .topLeading)
+                .font(.system(size: 15))
+                .frame(width: 350, height: 100, alignment: .topLeading)
+            
             Spacer()
-
         }
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)

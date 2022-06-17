@@ -12,7 +12,9 @@ import CoreLocation
 class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     // Current region on map
-    @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
+    @Published var mapRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 36.0189315, longitude: 129.3429384),
+        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
     // set manager to CLLocationManager
     private let manager = CLLocationManager()
@@ -61,24 +63,26 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
 }
 
 class LocationsViewModel: ObservableObject {
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)],
+        animation: .default) private var pins: FetchedResults<Pin>
     
-    // All loaded locations
-    @Published var locations: [Location]
+//    // All loaded locations
+//    @Published var locations: [Pin]
     
     // Current location on map
-    @Published var mapLocation: Location
+    @Published var mapLocation: Pin?
     
     // Show location detail via sheet
-    @Published var sheetLocation: Location? = nil
+    @Published var sheetLocation: Pin? = nil
     
-    init() {
-        let locations = LocationsDataService.locations
-        self.locations = locations
-        self.mapLocation = .empty
-//                self.updateMapRegion(location: locations.first!)
-    }
+//    init() {
+//        let locations = LocationsDataService.locations
+//        self.locations = [Pin]
+//        self.mapLocation = .empty
+////                self.updateMapRegion(location: locations.first!)
+//    }
 
-    func showNextLocation(location: Location) {
+    func showNextLocation(location: Pin) {
         withAnimation(.easeInOut) {
             mapLocation = location
 //            showLocationsList = false
