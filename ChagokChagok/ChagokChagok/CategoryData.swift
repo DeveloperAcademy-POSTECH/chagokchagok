@@ -7,36 +7,36 @@
 
 import SwiftUI
 extension Image {
-    static let cityImage: Image = Image("tempCategoryimage")
-    static let beachImgae: Image = Image("tempCategoryimage")
-    static let mountainImage: Image = Image("tempCategoryimage")
-    static let riverImage: Image = Image("tempCategoryimage")
-    static let sceneryImgae: Image = Image("tempCategoryimage")
-    static let nightscapeImage: Image = Image("tempCategoryimage")
-    static let withfriendImage: Image = Image("tempCategoryimage")
-    static let walkroadImage: Image = Image("tempCategoryimage")
-    static let cafeImage: Image = Image("tempCategoryimage")
-    static let restaurantImage: Image = Image("tempCategoryimage")
-    static let natureImage: Image = Image("tempCategoryimage")
-    static let photospotImage: Image = Image("tempCategoryimage")
+    static let cityImage: Image = Image("cityImage")
+    static let beachImgae: Image = Image("beachImage")
+    static let riverImage: Image = Image("riverImage")
+    static let nightscapeImage: Image = Image("nightscapeImage")
+    static let cafeImage: Image = Image("cafeImage")
+    static let restaurantImage: Image = Image("restaurantImage")
+    static let natureImage: Image = Image("natureImage")
+    static let photospotImage: Image = Image("photospotImage")
+    static let flowerImage: Image = Image("flowerImage")
+    static let islandImage: Image = Image("islandImage")
+    static let tourspotImage: Image = Image("tourspotImage")
+    static let sunsetImage: Image = Image("sunsetImage")
 }
 
 enum CourseCategory: String, CaseIterable, Hashable {
-    case city = "도심"
     case beach = "바닷가"
-    case mountain = "산"
-    case river = "강가"
-    case scenery = "풍경"
+    case city = "도심"
+    case flower = "꽃길"
+    case nature = "자연"
     case nightscape = "야경"
-    case withfriend = "친구랑"
-    case walkroad = "산책로"
+    case river = "강가"
 }
 
 enum PinCategory: String, CaseIterable, Hashable {
     case cafe = "카페"
+    case island = "섬"
     case restaurant = "맛집"
-    case nature = "자연"
+    case tourspot = "관광지"
     case photospot = "사진스팟"
+    case sunset = "노을"
 }
 
 extension CourseCategory {
@@ -46,18 +46,14 @@ extension CourseCategory {
             return Image.cityImage
         case .beach:
             return Image.beachImgae
-        case .mountain:
-            return Image.mountainImage
-        case .river:
-            return Image.riverImage
-        case .scenery:
-            return Image.sceneryImgae
+        case .flower:
+            return Image.flowerImage
+        case .nature:
+            return Image.natureImage
         case .nightscape:
             return Image.nightscapeImage
-        case .withfriend:
-            return Image.withfriendImage
-        case .walkroad:
-            return Image.walkroadImage
+        case .river:
+            return Image.riverImage
         }
     }
 }
@@ -67,12 +63,16 @@ extension PinCategory {
         switch self {
         case .cafe:
             return Image.cafeImage
+        case .island:
+            return Image.islandImage
         case .restaurant:
             return Image.restaurantImage
-        case .nature:
-            return Image.natureImage
+        case .tourspot:
+            return Image.tourspotImage
         case .photospot:
             return Image.photospotImage
+        case .sunset:
+            return Image.sunsetImage
         }
     }
 }
