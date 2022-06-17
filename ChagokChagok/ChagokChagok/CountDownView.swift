@@ -7,11 +7,11 @@
 import SwiftUI
 
 struct CountDownView: View {
+    @Binding var firstNaviLinkActive: Bool
+    
     @State private var timeRemaining = 5
     @State private var isActive = true
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    @State private var showAlert = false
     
     var body: some View {
         ZStack {
@@ -26,8 +26,8 @@ struct CountDownView: View {
                     .foregroundColor(.mainBlue)
                     .padding(.top, 76)
                 Button(action: {
-                    showAlert = true
                     isActive = false
+                    firstNaviLinkActive = false
                 }, label: {
                     Text("드라이브 취소")
                         .font(.system(size: 20, weight: .bold))
@@ -36,19 +36,11 @@ struct CountDownView: View {
                         .background(Color.mainBlue)
                         .clipShape(Capsule())
                 })
-                .alert("드라이브를 취소하시겠습니까?", isPresented: $showAlert) {
-                    Button("취소") {
-                        // TODO: ContentView로 가기
-                    }
-                    Button("돌아가기", role: .cancel) {
-                        isActive = true
-                    }
-                }
                 Spacer()
             }
             .ignoresSafeArea()
             if(timeRemaining < 1) {
-                RecordingView()
+                RecordingView(firstNaviLinkActive: $firstNaviLinkActive)
             }
         }
         .onReceive(timer) { time in
@@ -62,6 +54,6 @@ struct CountDownView: View {
 
 struct CountDownView_Previews: PreviewProvider {
     static var previews: some View {
-        CountDownView()
+        CountDownView(firstNaviLinkActive: .constant(true))
     }
 }

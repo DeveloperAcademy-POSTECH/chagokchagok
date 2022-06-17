@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @Binding var firstNaviLinkActive : Bool
     var body: some View {
         VStack {
             HStack {
@@ -22,11 +23,11 @@ struct MainView: View {
     
     // TODO: 디자인 픽스되면 버튼 View로 변경 예정
     var driveStartBtn: some View {
-        NavigationLink(destination: EmptyView(), label: {
+        NavigationLink(destination: CountDownView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive) {
             Image("tempDriveStart")
                 .resizable()
                 .frame(width: 222, height: 276)
-        })
+        }
     }
     
     var myFavoriteBtn: some View {
@@ -56,6 +57,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(firstNaviLinkActive: .constant(true))
     }
 }

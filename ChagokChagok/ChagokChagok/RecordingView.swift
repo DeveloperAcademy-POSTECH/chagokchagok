@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RecordingView: View {
+    @Binding var firstNaviLinkActive: Bool
+    
     var body: some View {
         ZStack {
             Color.baseBlack.ignoresSafeArea()
@@ -16,14 +18,16 @@ struct RecordingView: View {
                     .font(.system(size: 26, weight: .medium))
                     .foregroundColor(.white)
                     .padding(.top, 216.0)
-                NavigationLink(destination: ContentView(), label: {
+                Button(action: {
+                    firstNaviLinkActive = false
+                }, label: {
                     Text("드라이브 종료")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.white)
                         .padding(EdgeInsets(top: 20, leading: 45, bottom: 16, trailing: 45))
                         .background(Color.mainBlue)
                         .clipShape(Capsule())
-                }).navigationBarHidden(true)
+                })
                 Spacer()
             }
             .ignoresSafeArea()
@@ -33,6 +37,6 @@ struct RecordingView: View {
 
 struct RecordingView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordingView()
+        RecordingView(firstNaviLinkActive: .constant(true))
     }
 }
