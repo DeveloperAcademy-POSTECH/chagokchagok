@@ -8,15 +8,24 @@ struct MyFavoriteView: View {
     
     var pin = Pin()
     var course = Course()
-    
+
     var body: some View {
         VStack {
-            Text("Total \(pins.count + courses.count)")
-                .foregroundColor(.gray)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(EdgeInsets(top: 40, leading: 16, bottom: 20, trailing: 16))
-            myFavoriteList()
+            if pins.count + courses.count == 0 {
+                replaceText
+            } else {
+                Text("Total \(pins.count + courses.count)")
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(EdgeInsets(top: 40, leading: 16, bottom: 20, trailing: 16))
+                myFavoriteList()
+            }
         }
+    }
+    
+    var replaceText: some View {
+        Text("😃 아무고토없지롱 즐겨찾기를 눌러주세염.")
+            .bold()
     }
     
     private func myFavoriteList() -> some View {
