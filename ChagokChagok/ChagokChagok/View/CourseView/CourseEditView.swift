@@ -106,8 +106,8 @@ struct CourseEditView: View {
     
 }
 
-//struct CourseEditView_Previews: PreviewProvider {
+// struct CourseEditView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        CourseEditView()
 //    }
-//}
+// }

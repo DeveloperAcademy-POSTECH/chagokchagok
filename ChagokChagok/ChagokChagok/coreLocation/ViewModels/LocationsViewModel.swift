@@ -73,13 +73,13 @@ class LocationsViewModel: ObservableObject {
     @Published var mapLocation: Pin?
     
     // Show location detail via sheet
-    @Published var sheetLocation: Pin? = nil
+    @Published var sheetLocation: Pin?
     
 //    init() {
 //        let locations = LocationsDataService.locations
 //        self.locations = [Pin]
 //        self.mapLocation = .empty
-////                self.updateMapRegion(location: locations.first!)
+//                self.updateMapRegion(location: locations.first!)
 //    }
 
     func showNextLocation(location: Pin) {
@@ -124,7 +124,7 @@ class LatiLongiModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func fetchCountryAndCity(for location: CLLocation?) {
         guard let location = location else { return }
         let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+        geocoder.reverseGeocodeLocation(location) { (placemarks, _) in
             self.currentPlacemark = placemarks?.first
         }
     }

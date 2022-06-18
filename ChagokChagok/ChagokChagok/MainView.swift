@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @Binding var firstNaviLinkActive : Bool
+    @Binding var firstNaviLinkActive: Bool
     var body: some View {
         VStack(spacing: 16) {
             HStack(spacing: 16) {

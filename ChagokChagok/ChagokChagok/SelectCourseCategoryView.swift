@@ -83,8 +83,8 @@ struct SelectCourseCategoryView: View {
     }
 }
 
-//struct SelectCourseCategoryView_Previews: PreviewProvider {
+// struct SelectCourseCategoryView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        SelectCourseCategoryView()
 //    }
-//}
+// }

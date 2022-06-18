@@ -70,8 +70,6 @@ struct PinEditView: View {
                     .font(.system(size: 15))
                     .frame(width: 350, height: 200, alignment: .topLeading)
                     .opacity(textFieldMemo.isEmpty ? 0.2 : 1)
-                
-
             })
             
             Spacer()

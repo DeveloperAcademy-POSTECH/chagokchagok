@@ -59,7 +59,7 @@ extension LocationPreviewView {
     }
 }
 
-//struct LocationPreviewView_Previews: PreviewProvider {
+// struct LocationPreviewView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ZStack {
 //            Color.white.ignoresSafeArea()
@@ -69,4 +69,4 @@ extension LocationPreviewView {
 //        }
 //        .environmentObject(LocationsViewModel())
 //    }
-//}
+// }

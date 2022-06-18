@@ -81,9 +81,3 @@ struct SelectPinCategoryView: View {
         }
     }
 }
-
-//struct SelectPinCategoryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SelectPinCategoryView()
-//    }
-//}
