@@ -7,32 +7,29 @@ struct ListCell: View {
     var pin = Pin()
         
     var body: some View {
-
-        HStack {
-            listImage
-                .padding(.trailing, 16)
-            listText
-            Spacer()
-            isfavoriteBtn
+        GeometryReader { geo in
+            HStack {
+                listImage
+                    .padding(.trailing, 16)
+                listText
+                Spacer()
+                isfavoriteBtn
+            }
+            .frame(width: geo.size.width, height: 104, alignment: .leading)
         }
-        .frame(width: 350, height: 92)
     }
     
-    var listImage: some View {
+    private var listImage: some View {
         Image(pin.category ?? "핀")
             .listIconStyle()
     }
     
-    var listText: some View {
+    private var listText: some View {
         VStack(alignment: .leading, spacing: 7) {
             HStack {
                 Image("pinIcon")
                     .resizable()
-                    .frame(width: 13, height: 17)
-                    .padding(.bottom, 4)
-//                Text(data.type == 1 ? "tempTypeImage" : "tmepTypeImage")
-//                    .foregroundColor(.gray)
-//                    .font(.system(size: 12))
+                    .frame(width: 16, height: 13, alignment: .leading)
                 Text(pin.name ?? dateFormat.string(from: pin.date!))
                     .listTitleStyle()
                     .listTextSpaceStyle()
