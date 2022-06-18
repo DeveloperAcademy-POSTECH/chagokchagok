@@ -10,22 +10,18 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var firstNaviLinkActive = false
-
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.backGround.ignoresSafeArea()
-                MainView(firstNaviLinkActive: $firstNaviLinkActive)
-                    .padding(.top, 47)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Text("차곡차곡 🚙")
-                                .padding(EdgeInsets(top: 80, leading: 16, bottom: 16, trailing: 16))
-                                .font(.system(size: 26).weight(.semibold))
-                        }
-                    }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .padding(.all, 16)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("차곡차곡")
+                        .font(.title)
+                        .bold()
+                        .padding(.leading, 16)
+                    MainView(firstNaviLinkActive: $firstNaviLinkActive)
+                }
             }
         }
     }
