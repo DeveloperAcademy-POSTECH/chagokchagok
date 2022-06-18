@@ -13,6 +13,7 @@ extension Color {
     static let iconBlue = Color(hex: "#7090FF")
     static let iconPink = Color(hex: "#FFA0A0")
     static let iconBack = Color(hex: "#EFF2FF")
+    static let backGround = Color(hex: "#EEEEEE")
 
     init(hex: String) {
         let scanner = Scanner(string: hex)

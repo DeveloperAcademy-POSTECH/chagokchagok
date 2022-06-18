@@ -13,17 +13,20 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            MainView(firstNaviLinkActive: $firstNaviLinkActive)
-                .padding(.top, 47)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Text("차곡차곡 🚙")
-                            .padding(EdgeInsets(top: 80, leading: 16, bottom: 16, trailing: 16))
-                            .font(.system(size: 26).weight(.semibold))
+            ZStack{
+                Color.backGround.ignoresSafeArea()
+                MainView()
+                    .padding(.top, 47)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Text("차곡차곡 🚙")
+                                .padding(EdgeInsets(top: 80, leading: 16, bottom: 16, trailing: 16))
+                                .font(.system(size: 26).weight(.semibold))
+                        }
                     }
-                }
-                .navigationBarTitleDisplayMode(.inline)
-                .padding(.all, 16)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .padding(.all, 16)
+            }
         }
     }
 }

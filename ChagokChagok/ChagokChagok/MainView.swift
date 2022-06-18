@@ -3,18 +3,15 @@ import SwiftUI
 struct MainView: View {
     @Binding var firstNaviLinkActive : Bool
     var body: some View {
-        VStack {
-            HStack {
+        VStack(spacing: 16) {
+            HStack(spacing: 16) {
                 driveStartBtn
-                myFavoriteBtn
+                VStack(spacing: 16) {
+                    myCourseBtn
+                    myPinBtn
+                }
             }
-            .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
-            
-            HStack {
-                myCourseBtn
-                myPinBtn
-            }
-            .padding(.horizontal, 16)
+            myFavoriteBtn
             RecentRecord(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.03.12", type: "핀", isFavorite: true)
                 .padding()
             Spacer()
@@ -24,33 +21,37 @@ struct MainView: View {
     // TODO: 디자인 픽스되면 버튼 View로 변경 예정
     var driveStartBtn: some View {
         NavigationLink(destination: CountDownView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive) {
-            Image("tempDriveStart")
+            Image("driveStart")
                 .resizable()
-                .frame(width: 222, height: 276)
+                .frame(width: 204, height: 316)
+                .shadow(color: .baseBlack.opacity(0.1), radius: 20, x: 6, y: 6)
         }
     }
     
     var myFavoriteBtn: some View {
         NavigationLink(destination: MyFavoriteView(), label: {
-            Image("tempMyFavorite")
+            Image("myFavorite")
                 .resizable()
-                .frame(width: 116, height: 276)
+                .frame(width: 358, height: 104)
+                .shadow(color: .baseBlack.opacity(0.1), radius: 20, x: 6, y: 6)
         })
     }
     
     var myCourseBtn: some View {
         NavigationLink(destination: CourseListView(), label: {
-            Image("tempMyCourse")
+            Image("myCourse")
                 .resizable()
-                .frame(width: 171, height: 130)
+                .frame(width: 138, height: 150)
+                .shadow(color: .baseBlack.opacity(0.1), radius: 20, x: 6, y: 6)
         })
     }
     
     var myPinBtn: some View {
         NavigationLink(destination: LocationsView(), label: {
-            Image("tempMyPin")
+            Image("myPin")
                 .resizable()
-                .frame(width: 171, height: 130)
+                .frame(width: 138, height: 150)
+                .shadow(color: .baseBlack.opacity(0.1), radius: 20, x: 6, y: 6)
         })
     }
 }
