@@ -23,7 +23,7 @@ struct LocationsView: View {
                 VStack(spacing: 0) {
                     Spacer()
                     pinList
-                    locationsPreviewStack.padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
+                    locationsPreviewStack.padding(EdgeInsets(top: 10, leading: 0, bottom: 54, trailing: 0))
                 }
             }
             .ignoresSafeArea()
@@ -34,14 +34,8 @@ extension LocationsView {
     private var pinList: some View {
         // **** 액션에 핀 리스트 뷰 페이지 연결하기 ****
         NavigationLink(destination: PinListView(), label: {
-            Text("전체 핀 목록")
-                .font(.footnote)
-                .fontWeight(.black)
-                .foregroundColor(.primary)
-                .frame(width: 80, height: 40)
-                .background(.thickMaterial)
-                .cornerRadius(10)
-                .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
+            Image("listViewButton")
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 2, y: 2)
         })
     }
     

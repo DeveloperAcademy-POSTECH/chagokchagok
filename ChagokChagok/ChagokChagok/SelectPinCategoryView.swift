@@ -38,17 +38,18 @@ struct SelectPinCategoryView: View {
                     VStack {
                         Group {
                             if currentCategory == value.rawValue {
-                                value.categoryImage
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .overlay(
-                                            RoundedRectangle(cornerRadius: 50)
-                                                .stroke(.blue, lineWidth: 3)
-                                                .padding(10))
+                                ZStack {
+                                    value.categoryImage
+                                        .resizable()
+                                        .frame(width: 94, height: 94)
+                                    Image("selected")
+                                        .resizable()
+                                        .frame(width: 94, height: 94)
+                                }
                             } else {
                                 value.categoryImage
                                     .resizable()
-                                    .frame(width: 100, height: 100)
+                                    .frame(width: 94, height: 94)
                             }
                             selectCategoryText(value: value.rawValue)
                         }
@@ -62,8 +63,8 @@ struct SelectPinCategoryView: View {
     
     private func selectCategoryText(value: String) -> some View {
         Text(value)
-            .font(.system(size: 18))
-            .foregroundColor(self.currentCategory == value ? .blue : .black)
+            .font(.system(size: 18, weight: self.currentCategory == value ? .bold : .regular))
+            .foregroundColor(self.currentCategory == value ? .mainBlue : .baseBlack)
     }
     
     private func updatePinCategory() {

@@ -7,18 +7,18 @@
 
 import SwiftUI
 extension Image {
-    static let cityImage: Image = Image("cityImage")
-    static let beachImgae: Image = Image("beachImage")
-    static let riverImage: Image = Image("riverImage")
-    static let nightscapeImage: Image = Image("nightscapeImage")
-    static let cafeImage: Image = Image("cafeImage")
-    static let restaurantImage: Image = Image("restaurantImage")
-    static let natureImage: Image = Image("natureImage")
-    static let photospotImage: Image = Image("photospotImage")
-    static let flowerImage: Image = Image("flowerImage")
-    static let islandImage: Image = Image("islandImage")
-    static let tourspotImage: Image = Image("tourspotImage")
-    static let sunsetImage: Image = Image("sunsetImage")
+    static let cityImage: Image = Image("도심")
+    static let beachImgae: Image = Image("바닷가")
+    static let riverImage: Image = Image("강가")
+    static let nightscapeImage: Image = Image("야경")
+    static let cafeImage: Image = Image("카페")
+    static let restaurantImage: Image = Image("맛집")
+    static let natureImage: Image = Image("자연")
+    static let photospotImage: Image = Image("사진스팟")
+    static let flowerImage: Image = Image("꽃길")
+    static let islandImage: Image = Image("섬")
+    static let tourspotImage: Image = Image("관광지")
+    static let sunsetImage: Image = Image("노을")
 }
 
 enum CourseCategory: String, CaseIterable, Hashable {

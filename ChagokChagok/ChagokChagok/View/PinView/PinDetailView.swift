@@ -17,8 +17,8 @@ struct PinDetailView: View {
     var body: some View {
         VStack {
             HStack {
-                Circle()
-                    .foregroundColor(.gray)
+                Image(pin.category ?? "핀")
+                    .resizable()
                     .frame(width: 76, height: 76, alignment: .leading)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(dateFormat.string(from: pin.date ?? Date.now))
@@ -62,7 +62,9 @@ struct PinDetailView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 HStack {
-                    Image(systemName: "mappin.circle.fill")
+                    Image("pinIcon")
+                        .resizable()
+                        .frame(width: 15, height: 20)
                     Text("핀")
                 }
             }

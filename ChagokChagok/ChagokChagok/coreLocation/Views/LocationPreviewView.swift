@@ -18,14 +18,15 @@ struct LocationPreviewView: View {
     var body: some View {
         HStack(spacing: 24) {
             imageSection
+                .padding(.leading, 9.0)
             titleSection
+                .padding(.leading, 45.0)
+            Spacer()
         }
         .padding()
         .background(
-            RoundedRectangle(cornerRadius: 15)
-                .fill(.thickMaterial)
-                .frame(width: 280, height: 100)
-                .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
+            Image("mapCard")
+                .shadow(color: Color.black.opacity(0.16), radius: 20, x: 4, y: 4)
         )
     }
 }
@@ -33,16 +34,14 @@ struct LocationPreviewView: View {
 extension LocationPreviewView {
     private var imageSection: some View {
         ZStack {
-            if let imageName = "맛집" {
+            if let imageName = "tourspotImage" {
                 Image(imageName)
                     .resizable()
-                    .scaledToFill()
-                    .frame(width: 70, height: 70)
-                    .cornerRadius(15)
+                    .frame(width: 94, height: 94)
             }
         }
         .background(Color.white)
-        .cornerRadius(10)
+        .cornerRadius(47)
     }
     
     private var titleSection: some View {
