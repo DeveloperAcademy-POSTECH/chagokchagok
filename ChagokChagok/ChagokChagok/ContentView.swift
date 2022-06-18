@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var firstNaviLinkActive = false
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "AppleSDGothicNeo-Bold", size: 26)!]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont(name: "AppleSDGothicNeo-Bold", size: 26)!]
     }
     
     var body: some View {
