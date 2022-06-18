@@ -8,6 +8,7 @@ struct MyFavoriteView: View {
     
     var pin = Pin()
     var course = Course()
+    @State private var count = 0
     
     var body: some View {
         VStack {
@@ -17,26 +18,24 @@ struct MyFavoriteView: View {
     }
     
     private func myFavoriteList() -> some View {
-        VStack {
-            List {
-                ForEach(pins) { pin in
-                    NavigationLink {
-                        PinDetailView(pin: pin)
-                    } label: {
-                        ListCell(pin: pin)
-                    }
-                }
-                
-                ForEach(courses) { course in
-                    NavigationLink {
-                        CourseDetailView(course: course)
-                    } label: {
-                        ListCellForCourse(course: course)
-                    }
+        List {
+            ForEach(pins) { pin in
+                NavigationLink {
+                    PinDetailView(pin: pin)
+                } label: {
+                    ListCell(pin: pin)
                 }
             }
-            .listStyle(.plain)
+            
+            ForEach(courses) { course in
+                NavigationLink {
+                    CourseDetailView(course: course)
+                } label: {
+                    ListCellForCourse(course: course)
+                }
+            }
         }
+        .listStyle(.plain)
     }
 }
 
