@@ -41,11 +41,15 @@ struct ListCellForCourse: View {
         }
     }
     
-    var isfavoriteBtn: some View {
+    private var isfavoriteBtn: some View {
         VStack {
-            Image(systemName: course.isFavorite ? "heart.fill" : "heart")
-                .frame(width: 20, height: 20, alignment: .topTrailing)
-                .padding(.top, 5)
+            Button(action: {
+                // action
+            }, label: {
+                Image(systemName: course.isFavorite ? "heart.fill" : "heart")
+                    .frame(width: 20, height: 20, alignment: .topTrailing)
+                    .padding(.top, 5)
+            })
         }
     }
 }
