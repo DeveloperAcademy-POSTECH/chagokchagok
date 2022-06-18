@@ -26,6 +26,7 @@
 		38BBD8742852D7C400158D5A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8732852D7C400158D5A /* ListCell.swift */; };
 		38D20FEA285DDCFC001E267A /* CarplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D20FE9285DDCFC001E267A /* CarplayView.xib */; };
 		38D20FEC285DDE25001E267A /* CarplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D20FEB285DDE25001E267A /* CarplayViewController.swift */; };
+		38D20FEE285DDEC3001E267A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D20FED285DDEC3001E267A /* SceneDelegate.swift */; };
 		8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7E62852DDD80057C5FC /* PinListView.swift */; };
 		8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7ED285326D00057C5FC /* PinDetailView.swift */; };
 		8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EF2854A92E0057C5FC /* PinEditView.swift */; };
@@ -78,6 +79,7 @@
 		38BBD8732852D7C400158D5A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		38D20FE9285DDCFC001E267A /* CarplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarplayView.xib; sourceTree = "<group>"; };
 		38D20FEB285DDE25001E267A /* CarplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarplayViewController.swift; sourceTree = "<group>"; };
+		38D20FED285DDEC3001E267A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8C06B7E62852DDD80057C5FC /* PinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinListView.swift; sourceTree = "<group>"; };
 		8C06B7ED285326D00057C5FC /* PinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailView.swift; sourceTree = "<group>"; };
 		8C06B7EF2854A92E0057C5FC /* PinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEditView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				38D20FEB285DDE25001E267A /* CarplayViewController.swift */,
+				38D20FED285DDEC3001E267A /* SceneDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				3870D860285797700067F44A /* Data.swift in Sources */,
 				E6BFBB45285B9D0F003CCC5A /* CountDownView.swift in Sources */,
 				3870D85C28575B5B0067F44A /* ViewStyle.swift in Sources */,
+				38D20FEE285DDEC3001E267A /* SceneDelegate.swift in Sources */,
 				3870D85E2857970F0067F44A /* MyFavoriteView.swift in Sources */,
 				8CD1F3172859C47800E5C2DA /* CourseListView.swift in Sources */,
 				8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */,
