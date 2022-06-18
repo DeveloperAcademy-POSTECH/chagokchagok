@@ -184,9 +184,9 @@
 		38D20FE6285DDA54001E267A /* Carplay */ = {
 			isa = PBXGroup;
 			children = (
+				38D20FEF285DE008001E267A /* AppDelegate.swift */,
 				38D20FE8285DDACC001E267A /* ViewController */,
 				38D20FE7285DDAC2001E267A /* Views */,
-				38D20FEF285DE008001E267A /* AppDelegate.swift */,
 			);
 			path = Carplay;
 			sourceTree = "<group>";
