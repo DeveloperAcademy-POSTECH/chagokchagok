@@ -8,12 +8,14 @@ struct MyFavoriteView: View {
     
     var pin = Pin()
     var course = Course()
-    @State private var count = 0
     
     var body: some View {
         VStack {
+            Text("Total \(pins.count + courses.count)")
+                .foregroundColor(.gray)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(EdgeInsets(top: 40, leading: 16, bottom: 20, trailing: 16))
             myFavoriteList()
-            Spacer()
         }
     }
     
