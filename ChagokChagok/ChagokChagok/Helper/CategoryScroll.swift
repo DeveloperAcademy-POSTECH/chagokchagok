@@ -1,6 +1,7 @@
 import SwiftUI
 
-enum Categories: String, CaseIterable, Equatable { // TODO: CategoryData 내부 카테고리와 연결 필요
+// TODO: CategoryData 내부 카테고리와 연결 필요
+enum Categories: String, CaseIterable, Equatable {
     case forest = "자연"
     case ocean = "맛집"
     case photo = "포토존"

@@ -41,11 +41,11 @@ struct ListCell: View {
     }
 }
 
-//struct ListCell_Previews: PreviewProvider {
+// struct ListCell_Previews: PreviewProvider {
 //    static var previews: some View {
 //        var pin = Pin()
 //
 //        ListCell(pin: pin)
 //            .previewLayout(.sizeThatFits)
 //    }
-//}
+// }

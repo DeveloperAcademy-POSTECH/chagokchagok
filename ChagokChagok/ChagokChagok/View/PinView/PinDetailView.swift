@@ -81,10 +81,9 @@ struct PinDetailView: View {
     }
 }
 
-
-//struct PinDetailView_Previews: PreviewProvider {
+// struct PinDetailView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        PinDetailView(pin: Pin(entity: $0, insertInto: .none))
 //            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 //    }
-//}
+// }

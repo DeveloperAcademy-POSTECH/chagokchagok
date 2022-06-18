@@ -5,13 +5,13 @@ struct FilteredList: View {
     @Binding var selectedCategory: [String]
     
     var body: some View {
-        /* TODO: ListCell 받아와서 넣기
-        ForEach(self.contentsList, id: .\name) {content in
-            if selected.contains(content.category ?? "nil") {
-                
-            }
-        }
-        */
+        // TODO: ListCell 받아와서 넣기
+//        ForEach(self.contentsList, id: .\name) {content in
+//            if selected.contains(content.category ?? "nil") {
+//
+//            }
+//        }
+        
         if selectedCategory.isEmpty {
             List(contentsList, id: \.name) {pin in
                 GroupBox(label: Text(pin.name ?? "defaultName"), content: {

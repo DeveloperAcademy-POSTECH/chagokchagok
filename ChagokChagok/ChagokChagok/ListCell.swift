@@ -52,10 +52,3 @@ struct ListCell: View {
     }
     
 }
-
-//struct ListCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListCell(data: PinData.all().first!)
-//            .previewLayout(.sizeThatFits)
-//    }
-//}

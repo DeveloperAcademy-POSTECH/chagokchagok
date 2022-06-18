@@ -13,9 +13,9 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack{
+            ZStack {
                 Color.backGround.ignoresSafeArea()
-                MainView()
+                MainView(firstNaviLinkActive: $firstNaviLinkActive)
                     .padding(.top, 47)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {

@@ -39,11 +39,11 @@ struct CountDownView: View {
                 Spacer()
             }
             .ignoresSafeArea()
-            if(timeRemaining < 1) {
+            if timeRemaining < 1 {
                 RecordingView(firstNaviLinkActive: $firstNaviLinkActive)
             }
         }
-        .onReceive(timer) { time in
+        .onReceive(timer) { _ in
             guard isActive else { return }
             if timeRemaining > 0 {
                 timeRemaining -= 1
