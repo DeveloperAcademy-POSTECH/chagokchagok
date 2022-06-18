@@ -11,12 +11,16 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var firstNaviLinkActive = false
     
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "AppleSDGothicNeo-Bold", size: 26)!]
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.backGround.ignoresSafeArea()
                 MainView(firstNaviLinkActive: $firstNaviLinkActive)
-                    .navigationTitle("차곡차곡")
+                    .navigationBarTitle("차곡차곡")
             }
         }
     }
