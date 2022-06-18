@@ -18,3 +18,7 @@ opt_in_rules:
 
 excluded: # SwiftLint 검사에서 제외할 파일 경로
   - Pods
+
+line_length: # 한 줄에 250자 이상일 때 경고를 줍니다.
+    warning: 250
+    ignores_comments: true
