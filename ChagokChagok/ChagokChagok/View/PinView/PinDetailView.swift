@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PinDetailView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: true)],
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [],
         animation: .default) private var pins: FetchedResults<Pin>
-    
+
     var pin = Pin()
     
     var body: some View {
@@ -21,9 +20,8 @@ struct PinDetailView: View {
                 Circle()
                     .foregroundColor(.gray)
                     .frame(width: 76, height: 76, alignment: .leading)
-                
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(dateFormat.string(from: pin.date ?? Date()))
+                    Text(dateFormat.string(from: pin.date ?? Date.now))
                         .font(.system(size: 15))
                         .foregroundColor(.gray)
 
@@ -39,8 +37,16 @@ struct PinDetailView: View {
             }
             .frame(width: 350, height: 80, alignment: .leading)
             .padding(.top, 45)
-            
-            Rectangle() // 지도 들어갈 자리
+
+            Map(coordinateRegion: .constant(MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude),
+                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))),
+                interactionModes: .all, showsUserLocation: true, annotationItems: pins,
+                annotationContent: { pin in
+                MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude)) {
+                    LocationMapAnnotationView()
+                }
+            })
                 .frame(width: 350, height: 350)
                 .cornerRadius(14)
                 .padding(22)
@@ -54,9 +60,6 @@ struct PinDetailView: View {
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-//                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 HStack {
                     Image(systemName: "mappin.circle.fill")

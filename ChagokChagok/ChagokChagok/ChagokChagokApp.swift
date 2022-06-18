@@ -10,13 +10,13 @@ import SwiftUI
 @main
 struct ChagokChagokApp: App {
     @Environment(\.managedObjectContext) private var viewContext
-    @StateObject private var vm = LocationsViewModel()
+    @StateObject private var viewModel = LocationsViewModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
-                .environmentObject(vm)
+                .environmentObject(viewModel)
         }
     }
 }

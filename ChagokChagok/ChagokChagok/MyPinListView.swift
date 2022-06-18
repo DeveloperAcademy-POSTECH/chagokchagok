@@ -32,7 +32,7 @@ struct MyPinListView: View {
             FilteredList(selectedCategory: $selectedCategory) // 선택된 인덱스와 전체 카테고리 목록을 넘겨줌
             Spacer()
             }
-            .ignoresSafeArea()
+        .ignoresSafeArea()
     }
 }
 

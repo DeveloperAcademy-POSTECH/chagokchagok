@@ -12,53 +12,68 @@ struct CourseEditView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     var course = Course()
-    @State var textFieldName: String
-    @State var textFieldMemo: String
+    
+    @State var textFieldName: String = "제목"
+    @State var textFieldMemo: String = "메모"
+    @State var placeholder: String = "입력하세요"
     
     var body: some View {
         VStack {
             HStack {
-                VStack {
-                    Circle()
-                        .foregroundColor(.gray)
-                        .frame(width: 80, height: 80, alignment: .leading)
+                ZStack {
+                    Text("\(course.category ?? "핀 이미지")")
+                        .foregroundColor(.black)
+                        .frame(width: 76, height: 76, alignment: .center)
+                        .clipShape(Circle())
                     
-                    Text("풍경") // ToDo: 추후 pin.category로 변경
-                        .font(.subheadline)
-                        
-                }.padding(.trailing)
-                
-                VStack {
-                    HStack {
-                        TextField(course.name ?? "임시 제목", text: $textFieldName)
-                            .font(.title)
-                            .keyboardType(.default)
+                    NavigationLink(destination: {
+                        SelectCourseCategoryView(course: course, currentCategory: course.category ?? "")
+                    }, label: {
+                        Circle()
                             .foregroundColor(.blue)
-                            
-                        Spacer()
-                    }.frame(height: 80)
-                    HStack {
-                        Text("경상북도 포항항 (좌표->주소)")
-                        Text("|")
-                            .foregroundColor(.secondary)
-                        Text(dateFormat.string(from: course.date ?? Date()))
-                        
-                        Spacer()
-                    }
-                    .font(.subheadline)
-                    .lineLimit(1)
+                            .frame(width: 76, height: 76)
+                            .opacity(0.5)
+                    })
+ 
+                    Text("변경")
+                        .foregroundColor(.white)
+                        .frame(width: 76, height: 76, alignment: .center)
                 }
-            }.padding()
-   
-            TextEditor(text: $textFieldMemo)
-                .frame(width: 350, height: 200, alignment: .topLeading)
-                .border(.gray, width: 1)
-                .cornerRadius(5)
-                .foregroundColor(.blue)
+                
+                VStack(spacing: 2) {
+                    Text("")
+                        .font(.system(size: 15))
+                        .foregroundColor(.gray)
+                    
+                    TextField(course.name ?? "", text: $textFieldName)
+                        .font(.system(size: 22))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .frame(width: 250)
+                    
+                    Divider()
+                    
+                }
+                .padding(.leading, 24)
+            }
+            .frame(width: 350, height: 80, alignment: .leading)
+            .padding(.top, 45)
+            
+            ZStack(alignment: .topLeading, content: {
+                if textFieldMemo.isEmpty {
+                    TextEditor(text: $placeholder)
+                        .font(.system(size: 15))
+                        .frame(width: 350, height: 200, alignment: .topLeading)
+                }
+                TextEditor(text: $textFieldMemo)
+                    .font(.system(size: 15))
+                    .frame(width: 350, height: 200, alignment: .topLeading)
+                    .opacity(textFieldMemo.isEmpty ? 0.2 : 1)
+            })
             
             Spacer()
         }
-        .navigationTitle("편집")
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

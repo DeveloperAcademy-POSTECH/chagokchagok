@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State var firstNaviLinkActive = false
 
     var body: some View {
         NavigationView {

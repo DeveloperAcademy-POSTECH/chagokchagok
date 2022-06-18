@@ -9,6 +9,9 @@ import SwiftUI
 
 struct CourseListView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State private var selectedCategory: [String] = []
 
     @FetchRequest(entity: Course.entity(), sortDescriptors: [],
         animation: .default) private var courses: FetchedResults<Course>
@@ -20,19 +23,41 @@ struct CourseListView: View {
             }
             .buttonStyle(.borderedProminent)
             
-            List {
-                ForEach(courses) { course in
-                    NavigationLink {
-                        CourseDetailView(course: course)
-                    } label: {
-                        Text(course.name ?? "")
+            CourseCategoryScroll(selectedCategory: $selectedCategory)
+                .padding(EdgeInsets(top: 33.0, leading: 20.0, bottom: 0, trailing: 0))
+            Text("Total ")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(Color.black)
+                .opacity(0.6)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(EdgeInsets(top: 24.0, leading: 20.0, bottom: 0, trailing: 0))
+            
+            if selectedCategory.isEmpty {
+                List {
+                    ForEach(courses) { course in
+                        NavigationLink {
+                            CourseDetailView(course: course)
+                        } label: {
                             ListCellForCourse(course: course)
+                        }
+                    }
+                    .onDelete(perform: deletecourses)
+                }
+                .listStyle(.plain)
+            } else {
+                List {
+                    ForEach(courses) { course in
+                        if selectedCategory.contains(course.category ?? "") {
+                            NavigationLink {
+                                CourseDetailView(course: course)
+                            } label: {
+                                ListCellForCourse(course: course)
+                            }
+                        }
                     }
                 }
-                .onDelete(perform: deletecourses)
+                .listStyle(.plain)
             }
-            .listStyle(.plain)
-            
             Spacer()
         }
         .navigationTitle("")
