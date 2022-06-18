@@ -2,36 +2,34 @@ import SwiftUI
 
 struct ListCellForCourse: View {
     @FetchRequest(entity: Course.entity(), sortDescriptors: [],
-        animation: .default) private var courses: FetchedResults<Course>
+                  animation: .default) private var courses: FetchedResults<Course>
     
     var course = Course()
     
     var body: some View {
-        HStack {
-            listImage
-                .padding(.trailing, 16)
-            listText
-            Spacer()
-            isfavoriteBtn
+        GeometryReader { geo in
+            HStack {
+                listImage
+                listText
+                    .padding(.leading, 17)
+                Spacer()
+                isfavoriteBtn
+            }
+            .frame(width: geo.size.width, height: 104, alignment: .leading)
         }
-        .frame(width: 350, height: 92)
     }
     
-    var listImage: some View {
+    private var listImage: some View {
         Image(course.category ?? "코스")
             .listIconStyle()
     }
     
-    var listText: some View {
+    private var listText: some View {
         VStack(alignment: .leading, spacing: 7) {
             HStack {
                 Image("courseIcon")
                     .resizable()
                     .frame(width: 16, height: 13, alignment: .leading)
-                    .padding(.bottom, 6)
-//                Text(data.type == 1 ? "tempTypeImage" : "tmepTypeImage")
-//                    .foregroundColor(.gray)
-//                    .font(.system(size: 12))
                 Text(course.name ?? dateFormat.string(from: course.date!))
                     .listTitleStyle()
                     .listTextSpaceStyle()
