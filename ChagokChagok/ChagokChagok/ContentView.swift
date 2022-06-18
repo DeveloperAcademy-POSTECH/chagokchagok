@@ -15,13 +15,8 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color.backGround.ignoresSafeArea()
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("차곡차곡")
-                        .font(.title)
-                        .bold()
-                        .padding(.leading, 16)
-                    MainView(firstNaviLinkActive: $firstNaviLinkActive)
-                }
+                MainView(firstNaviLinkActive: $firstNaviLinkActive)
+                    .navigationTitle("차곡차곡")
             }
         }
     }

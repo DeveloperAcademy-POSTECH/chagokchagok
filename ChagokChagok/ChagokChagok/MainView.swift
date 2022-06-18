@@ -13,7 +13,6 @@ struct MainView: View {
             }
             myFavoriteBtn
             RecentRecord(image: "tempPin", name: "이름 미정", memo: "메모를 수정해라아아악", createTime: "2022.03.12", type: "핀", isFavorite: true)
-                .padding()
         }
         .padding(.top, 22)
     }
