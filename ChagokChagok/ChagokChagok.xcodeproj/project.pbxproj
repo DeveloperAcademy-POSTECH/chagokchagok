@@ -24,6 +24,7 @@
 		38A8DC642850B8E7007095B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */; };
 		38A8DC6C2850B986007095B5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 38A8DC6B2850B986007095B5 /* .swiftlint.yml */; };
 		38BBD8742852D7C400158D5A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BBD8732852D7C400158D5A /* ListCell.swift */; };
+		38D20FEA285DDCFC001E267A /* CarplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D20FE9285DDCFC001E267A /* CarplayView.xib */; };
 		8C06B7E72852DDD80057C5FC /* PinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7E62852DDD80057C5FC /* PinListView.swift */; };
 		8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7ED285326D00057C5FC /* PinDetailView.swift */; };
 		8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C06B7EF2854A92E0057C5FC /* PinEditView.swift */; };
@@ -74,6 +75,7 @@
 		38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38A8DC6B2850B986007095B5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38BBD8732852D7C400158D5A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		38D20FE9285DDCFC001E267A /* CarplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarplayView.xib; sourceTree = "<group>"; };
 		8C06B7E62852DDD80057C5FC /* PinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinListView.swift; sourceTree = "<group>"; };
 		8C06B7ED285326D00057C5FC /* PinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailView.swift; sourceTree = "<group>"; };
 		8C06B7EF2854A92E0057C5FC /* PinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEditView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		38A8DC5B2850B8E6007095B5 /* ChagokChagok */ = {
 			isa = PBXGroup;
 			children = (
+				38D20FE6285DDA54001E267A /* Carplay */,
 				CD943D9628584B420076A794 /* coreLocation */,
 				38A8DC5C2850B8E6007095B5 /* ChagokChagokApp.swift */,
 				38A8DC5E2850B8E6007095B5 /* ContentView.swift */,
@@ -170,6 +173,30 @@
 				38A8DC632850B8E7007095B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38D20FE6285DDA54001E267A /* Carplay */ = {
+			isa = PBXGroup;
+			children = (
+				38D20FE8285DDACC001E267A /* ViewController */,
+				38D20FE7285DDAC2001E267A /* Views */,
+			);
+			path = Carplay;
+			sourceTree = "<group>";
+		};
+		38D20FE7285DDAC2001E267A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38D20FE9285DDCFC001E267A /* CarplayView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38D20FE8285DDACC001E267A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		8C06B7F12854ADFC0057C5FC /* PinView */ = {
@@ -335,6 +362,7 @@
 				38A8DC6C2850B986007095B5 /* .swiftlint.yml in Resources */,
 				38A8DC642850B8E7007095B5 /* Preview Assets.xcassets in Resources */,
 				38A8DC612850B8E7007095B5 /* Assets.xcassets in Resources */,
+				38D20FEA285DDCFC001E267A /* CarplayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
