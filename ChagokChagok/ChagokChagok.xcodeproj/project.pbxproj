@@ -537,7 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChagokChagok/Preview Content\"";
-				DEVELOPMENT_TEAM = B9HX5RRRUK;
+				DEVELOPMENT_TEAM = PTBWTQ27YA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationUsageDescription = "Location info is using for your app service";
@@ -568,7 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChagokChagok/Preview Content\"";
-				DEVELOPMENT_TEAM = B9HX5RRRUK;
+				DEVELOPMENT_TEAM = PTBWTQ27YA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationUsageDescription = "Location info is using for your app service";

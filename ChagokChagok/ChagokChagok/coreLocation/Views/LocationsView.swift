@@ -9,33 +9,31 @@ import SwiftUI
 import MapKit
 
 struct LocationsView: View {
-    @EnvironmentObject private var vm: LocationsViewModel
-    @StateObject private var lm = LocationManager()
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [],
+        animation: .default) private var pins: FetchedResults<Pin>
+    
+    var pin = Pin()
+    
+    @EnvironmentObject private var viewModel: LocationsViewModel
+    @StateObject private var locationManager = LocationManager()
     
     var body: some View {
             ZStack {
                 mapLayer
-                
                 VStack(spacing: 0) {
                     Spacer()
                     pinList
-                    Button(action: blink) {
-                        locationsPreviewStack.padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
-                    }
+                    locationsPreviewStack.padding(EdgeInsets(top: 10, leading: 0, bottom: 30, trailing: 0))
                 }
             }
             .ignoresSafeArea()
-    }
-    
-    func blink() {
-        print("blink")
     }
 }
 
 extension LocationsView {
     private var pinList: some View {
         // **** 액션에 핀 리스트 뷰 페이지 연결하기 ****
-        NavigationLink(destination: LocationsListView(), label: {
+        NavigationLink(destination: PinListView(), label: {
             Text("전체 핀 목록")
                 .font(.footnote)
                 .fontWeight(.black)
@@ -48,16 +46,15 @@ extension LocationsView {
     }
     
     private var mapLayer: some View {
-        Map(coordinateRegion: $lm.mapRegion,
+        Map(coordinateRegion: $locationManager.mapRegion,
             showsUserLocation: true,
-            annotationItems: vm.locations,
-            annotationContent: { location in MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
-
+            annotationItems: pins,
+            annotationContent: { pin in MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude)) {
             LocationMapAnnotationView()
-                .scaleEffect(vm.mapLocation == location ? 1.1 : 0.8)
+                .scaleEffect(pin == pin ? 1.1 : 0.8)
                 .shadow(radius: 10)
                 .onTapGesture {
-                    vm.showNextLocation(location: location)
+                    viewModel.showNextLocation(location: pin)
                 }
         }
         })
@@ -65,18 +62,15 @@ extension LocationsView {
     
     private var locationsPreviewStack: some View {
         ZStack {
-            ForEach(vm.locations) { location in
-                if vm.mapLocation == location {
-                    LocationPreviewView(location: location)
+            ForEach(pins) { pin in
+                if pin == pin {
+                    NavigationLink(destination: {
+                        PinDetailView(pin: pin)
+                    }, label: {
+                        LocationPreviewView(pin: pin)
+                    })
                 }
             }
         }
-    }
-}
-
-struct LocationsView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationsView()
-            .environmentObject(LocationsViewModel())
     }
 }

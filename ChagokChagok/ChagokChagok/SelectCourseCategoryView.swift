@@ -1,20 +1,31 @@
-//
-//  SelectCourseCategoryView.swift
-//  ChagokChagok
-//
-//  Created by LeeJiSoo on 2022/06/15.
-//
-
 import SwiftUI
 
 struct SelectCourseCategoryView: View {
+    @Environment(\.presentationMode) var presentation
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(entity: Course.entity(), sortDescriptors: [],
+        animation: .default) private var courses: FetchedResults<Course>
+    
+    var course = Course()
+
     // TODO: 해당 pin/course 가 어떤 카테고린지 받아와야함
-    @State var currentCategory = CourseCategory.city.rawValue
+    @State var currentCategory: String
+    
     let column = [GridItem(.adaptive(minimum: 100))]
     
     var body: some View {
         VStack {
             selectCategoryImage()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    updateCourseCategory()
+                } label: {
+                    Text("저장")
+                }
+            }
         }
     }
     
@@ -55,10 +66,25 @@ struct SelectCourseCategoryView: View {
             .font(.system(size: 18))
             .foregroundColor(self.currentCategory == value ? .blue : .black)
     }
-}
+    
+    private func updateCourseCategory() {
+        withAnimation {
+            course.category = currentCategory
 
-struct SelectCourseCategoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectCourseCategoryView()
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+            
+            self.presentation.wrappedValue.dismiss()
+        }
     }
 }
+
+//struct SelectCourseCategoryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SelectCourseCategoryView()
+//    }
+//}
