@@ -10,6 +10,7 @@ struct ListCell: View {
 
         HStack {
             listImage
+                .padding(.trailing, 16)
             listText
             Spacer()
             isfavoriteBtn
@@ -18,24 +19,25 @@ struct ListCell: View {
     }
     
     var listImage: some View {
-        Image(pin.category ?? "tempCategoryimage")
+        Image(pin.category ?? "핀")
             .listIconStyle()
     }
     
     var listText: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        VStack(alignment: .leading, spacing: 7) {
             HStack {
-                Image("tempTypeImage")
+                Image("pinIcon")
                     .resizable()
-                    .frame(width: 13, height: 10, alignment: .leading)
+                    .frame(width: 13, height: 17)
+                    .padding(.bottom, 4)
 //                Text(data.type == 1 ? "tempTypeImage" : "tmepTypeImage")
 //                    .foregroundColor(.gray)
 //                    .font(.system(size: 12))
+                Text(pin.name ?? dateFormat.string(from: pin.date!))
+                    .listTitleStyle()
+                    .listTextSpaceStyle()
             }
-            .frame(width: 40, height: 20)
-            Text(pin.name ?? dateFormat.string(from: pin.date!))
-                .listTitleStyle()
-                .listTextSpaceStyle()
+            .frame(width: 208, height: 22, alignment: .leading)
             Text(pin.memo ?? "메모를 입력바랍니다아")
                 .listMemoStyle()
                 .listMemoSpaceStyle()
@@ -47,7 +49,6 @@ struct ListCell: View {
             Image(systemName: pin.isFavorite ? "heart.fill" : "heart")
                 .frame(width: 20, height: 20, alignment: .topTrailing)
                 .padding(.top, 5)
-            Spacer()
         }
     }
     

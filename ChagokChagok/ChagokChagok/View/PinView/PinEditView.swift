@@ -21,10 +21,9 @@ struct PinEditView: View {
         VStack {
             HStack {
                 ZStack {
-                    Text("\(pin.category ?? "핀 이미지")")
-                        .foregroundColor(.black)
-                        .frame(width: 76, height: 76, alignment: .center)
-                        .clipShape(Circle())
+                    Image(pin.category ?? "핀")
+                        .resizable()
+                        .frame(width: 76, height: 76, alignment: .leading)
                     
                     NavigationLink(destination: {
                         SelectPinCategoryView(pin: pin, currentCategory: pin.category ?? "")

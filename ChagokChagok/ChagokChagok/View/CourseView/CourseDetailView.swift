@@ -18,8 +18,8 @@ struct CourseDetailView: View {
     var body: some View {
         VStack {
             HStack {
-                Circle()
-                    .foregroundColor(.gray)
+                Image(course.category ?? "코스")
+                    .resizable()
                     .frame(width: 76, height: 76, alignment: .leading)
                 
                 VStack(alignment: .leading, spacing: 2) {
@@ -62,7 +62,9 @@ struct CourseDetailView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 HStack {
-                    Image(systemName: "mappin.circle.fill")
+                    Image("courseIcon")
+                        .resizable()
+                        .frame(width: 20, height: 15)
                     Text("코스")
                 }
             }

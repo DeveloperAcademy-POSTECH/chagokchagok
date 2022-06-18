@@ -21,10 +21,9 @@ struct CourseEditView: View {
         VStack {
             HStack {
                 ZStack {
-                    Text("\(course.category ?? "핀 이미지")")
-                        .foregroundColor(.black)
+                    Image(course.category ?? "코스")
+                        .resizable()
                         .frame(width: 76, height: 76, alignment: .center)
-                        .clipShape(Circle())
                     
                     NavigationLink(destination: {
                         SelectCourseCategoryView(course: course, currentCategory: course.category ?? "")
