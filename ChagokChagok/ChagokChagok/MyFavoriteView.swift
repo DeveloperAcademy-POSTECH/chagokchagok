@@ -2,9 +2,7 @@ import SwiftUI
 
 struct MyFavoriteView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [], predicate: NSPredicate(format: "isFavorite == %@", "1"), animation: .default) private var pins: FetchedResults<Pin>
-    
     @FetchRequest(entity: Course.entity(), sortDescriptors: [], predicate: NSPredicate(format: "isFavorite == %@", "1"),
                   animation: .default) private var courses: FetchedResults<Course>
     
@@ -13,48 +11,33 @@ struct MyFavoriteView: View {
     
     var body: some View {
         VStack {
-//            myFavoriteCount()
-            
             myFavoriteList()
-            
             Spacer()
         }
     }
     
     private func myFavoriteList() -> some View {
         VStack {
-                List {
-                    ForEach(pins) { pin in
-                        NavigationLink {
-                            PinDetailView(pin: pin)
-                        } label: {
-                            ListCell(pin: pin)
-                        }
-                    }
-                    ForEach(courses) { course in
-                        if course.isFavorite {
-                            NavigationLink {
-                                CourseDetailView(course: course)
-                            } label: {
-                                ListCellForCourse(course: course)
-                            }
-                        }
+            List {
+                ForEach(pins) { pin in
+                    NavigationLink {
+                        PinDetailView(pin: pin)
+                    } label: {
+                        ListCell(pin: pin)
                     }
                 }
-                .listStyle(.plain)
+                
+                ForEach(courses) { course in
+                    NavigationLink {
+                        CourseDetailView(course: course)
+                    } label: {
+                        ListCellForCourse(course: course)
+                    }
+                }
+            }
+            .listStyle(.plain)
         }
     }
-    
-//        private func myFavoriteCount() {
-//            ForEach(pins) { pin in
-//                pinCount += Int(pin.isFavorite)
-//            }
-//
-//            Text("Total \(pins.contains(Int(pin.isFavorite)))")
-//                .font(.system(size: 14))
-//                .frame(maxWidth: .infinity, alignment: .leading)
-//                .padding(.horizontal, 20)
-//        }
 }
 
 struct MyFavoriteView_Previews: PreviewProvider {
