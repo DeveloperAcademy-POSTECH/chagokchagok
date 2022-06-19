@@ -7,16 +7,14 @@ struct ListCellForCourse: View {
     var course = Course()
     
     var body: some View {
-        GeometryReader { geo in
-            HStack {
-                listImage
-                listText
-                    .padding(.leading, 17)
-                Spacer()
-                isfavoriteBtn
-            }
-            .frame(width: geo.size.width, height: 104, alignment: .leading)
+        HStack {
+            listImage
+                .padding(.trailing, 16)
+            listText
+            Spacer()
+            isfavoriteBtn
         }
+        .frame(width: 350, height: 104)
     }
     
     private var listImage: some View {
@@ -30,6 +28,7 @@ struct ListCellForCourse: View {
                 Image("courseIcon")
                     .resizable()
                     .frame(width: 16, height: 13, alignment: .leading)
+                    .padding(.bottom, 6)
                 Text(course.name ?? dateFormat.string(from: course.date!))
                     .listTitleStyle()
                     .listTextSpaceStyle()
