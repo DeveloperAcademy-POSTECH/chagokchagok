@@ -53,6 +53,8 @@
 		E6BFBB31285ADD89003CCC5A /* PinCategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB30285ADD89003CCC5A /* PinCategoryScroll.swift */; };
 		E6BFBB45285B9D0F003CCC5A /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB44285B9D0F003CCC5A /* CountDownView.swift */; };
 		E6BFBB47285B9D1B003CCC5A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB46285B9D1B003CCC5A /* RecordingView.swift */; };
+		E6BFBB5F285EECE3003CCC5A /* wheelBtn.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6BFBB5E285EECE3003CCC5A /* wheelBtn.gif */; };
+		E6BFBB61285EED07003CCC5A /* InputGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BFBB60285EED07003CCC5A /* InputGif.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,8 @@
 		E6BFBB30285ADD89003CCC5A /* PinCategoryScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCategoryScroll.swift; sourceTree = "<group>"; };
 		E6BFBB44285B9D0F003CCC5A /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		E6BFBB46285B9D1B003CCC5A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		E6BFBB5E285EECE3003CCC5A /* wheelBtn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wheelBtn.gif; sourceTree = "<group>"; };
+		E6BFBB60285EED07003CCC5A /* InputGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGif.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				3870D8862859F6BD0067F44A /* CategoryData.swift */,
 				3870D8882859F7030067F44A /* SelectCourseCategoryView.swift */,
 				3870D88A2859F80C0067F44A /* SelectPinCategoryView.swift */,
+				E6BFBB5E285EECE3003CCC5A /* wheelBtn.gif */,
+				E6BFBB60285EED07003CCC5A /* InputGif.swift */,
 			);
 			path = ChagokChagok;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				38A8DC6C2850B986007095B5 /* .swiftlint.yml in Resources */,
 				38A8DC642850B8E7007095B5 /* Preview Assets.xcassets in Resources */,
 				38A8DC612850B8E7007095B5 /* Assets.xcassets in Resources */,
+				E6BFBB5F285EECE3003CCC5A /* wheelBtn.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +396,7 @@
 				8CD1F3172859C47800E5C2DA /* CourseListView.swift in Sources */,
 				8C7E7A942856BED6001E3AAF /* FavoriteButton.swift in Sources */,
 				8CD1F31F2859C58900E5C2DA /* FavoriteButtonForPin.swift in Sources */,
+				E6BFBB61285EED07003CCC5A /* InputGif.swift in Sources */,
 				8C06B7F02854A92E0057C5FC /* PinEditView.swift in Sources */,
 				8CD1F30E2859C45900E5C2DA /* Persistence.swift in Sources */,
 				8C06B7EE285326D00057C5FC /* PinDetailView.swift in Sources */,
