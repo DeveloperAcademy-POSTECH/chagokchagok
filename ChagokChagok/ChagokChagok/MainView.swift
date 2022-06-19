@@ -19,12 +19,30 @@ struct MainView: View {
     
     // TODO: 디자인 픽스되면 버튼 View로 변경 예정
     var driveStartBtn: some View {
-        NavigationLink(destination: CountDownView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive) {
-            Image("driveStart")
-                .resizable()
+        NavigationLink(destination: CountDownView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive, label: {
+            ZStack(alignment: .leading) {
+                GifImage()
+                    .frame(width: 204, height: 316)
+                    .cornerRadius(12)
+                    .shadow(color: .baseBlack.opacity(0.1), radius: 20, x: 6, y: 6)
+                HStack{
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text("드라이브 시작")
+                            .font(.system(size: 20, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(.top, 16)
+                        Text("드라이브 기록 시작")
+                            .font(.system(size: 12))
+                            .foregroundColor(.white)
+                            .padding(.top, 6)
+                        Spacer()
+                    }
+                    .padding(.leading, 18.0)
+                    Spacer()
+                }
                 .frame(width: 204, height: 316)
-                .shadow(color: .baseBlack.opacity(0.1), radius: 20, x: 6, y: 6)
-        }
+            }
+        })
     }
     
     var myFavoriteBtn: some View {
