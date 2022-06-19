@@ -39,12 +39,14 @@ struct ListCell: View {
         }
     }
     
-    var isfavoriteBtn: some View {
-        VStack {
+    private var isfavoriteBtn: some View {
+        Button(action: {
+            // action
+        }, label: {
             Image(systemName: pin.isFavorite ? "heart.fill" : "heart")
                 .frame(width: 20, height: 20, alignment: .topTrailing)
                 .padding(.top, 5)
-        }
+        })
     }
     
 }
