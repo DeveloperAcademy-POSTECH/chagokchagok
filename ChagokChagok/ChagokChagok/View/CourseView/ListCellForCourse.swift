@@ -12,7 +12,7 @@ struct ListCellForCourse: View {
                 .padding(.trailing, 16)
             listText
             Spacer()
-            isfavoriteBtn
+            FavoriteButtonForCourse(course: course)
         }
         .frame(width: 350, height: 104)
     }
@@ -38,15 +38,5 @@ struct ListCellForCourse: View {
                 .listMemoStyle()
                 .listMemoSpaceStyle()
         }
-    }
-    
-    private var isfavoriteBtn: some View {
-        Button(action: {
-            // action
-        }, label: {
-            Image(systemName: course.isFavorite ? "heart.fill" : "heart")
-                .frame(width: 20, height: 20, alignment: .topTrailing)
-                .padding(.top, 5)
-        })
     }
 }

@@ -12,7 +12,7 @@ struct ListCell: View {
                 .padding(.trailing, 16)
             listText
             Spacer()
-            isfavoriteBtn
+            FavoriteButtonForPin(pin: pin)
         }
         .frame(width: 350, height: 104, alignment: .leading)
     }
@@ -38,15 +38,4 @@ struct ListCell: View {
                 .listMemoSpaceStyle()
         }
     }
-    
-    private var isfavoriteBtn: some View {
-        Button(action: {
-            // action
-        }, label: {
-            Image(systemName: pin.isFavorite ? "heart.fill" : "heart")
-                .frame(width: 20, height: 20, alignment: .topTrailing)
-                .padding(.top, 5)
-        })
-    }
-    
 }
