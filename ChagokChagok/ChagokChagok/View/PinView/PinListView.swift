@@ -9,56 +9,64 @@ import SwiftUI
 
 struct PinListView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)], animation: .default) private var pins: FetchedResults<Pin>
-        
     @State private var selectedCategory: [String] = []
     
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)], animation: .default) private var pins: FetchedResults<Pin>
+    
     var body: some View {
-        VStack {
-            Button(action: addPin) {
-                Text("생성")
-            }
-            .buttonStyle(.borderedProminent)
-            
-            PinCategoryScroll(selectedCategory: $selectedCategory)
-                .padding(EdgeInsets(top: 33.0, leading: 20.0, bottom: 0, trailing: 0))
-            Text("Total ")
-                .font(.system(size: 14, weight: .regular))
-                .foregroundColor(Color.black)
-                .opacity(0.6)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(EdgeInsets(top: 24.0, leading: 20.0, bottom: 0, trailing: 0))
-            
-            if selectedCategory.isEmpty {
-                List {
-                    ForEach(pins) { pin in
-                        NavigationLink {
-                            PinDetailView(pin: pin)
-                        } label: {
-                            ListCell(pin: pin)
-                        }
-                    }
-                    .onDelete(perform: deletePins)
+        GeometryReader { geo in
+            VStack {
+                Button(action: addPin) {
+                    Text("생성")
                 }
-                .listStyle(.plain)
-            } else {
-                List {
-                    ForEach(pins) { pin in
-                        if selectedCategory.contains(pin.category ?? "") {
-                            NavigationLink {
-                                PinDetailView(pin: pin)
-                            } label: {
+                .buttonStyle(.borderedProminent)
+                
+                PinCategoryScroll(selectedCategory: $selectedCategory)
+                    .padding(EdgeInsets(top: 33.0, leading: 20.0, bottom: 0, trailing: 0))
+                Text("Total ")
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundColor(Color.black)
+                    .opacity(0.6)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(EdgeInsets(top: 24.0, leading: 20.0, bottom: 0, trailing: 0))
+                
+                if selectedCategory.isEmpty {
+                    List {
+                        ForEach(pins) { pin in
+                            ZStack {
+                                NavigationLink(destination: PinDetailView(pin: pin)) {
+                                    EmptyView()
+                                }
+                                .opacity(0)
                                 ListCell(pin: pin)
+                                    .frame(width: geo.size.width * 0.9, height: 104, alignment: .leading)
+                            }
+                        }
+                        .onDelete(perform: deletePins)
+                    }
+                    .listStyle(.plain)
+                } else {
+                    List {
+                        ForEach(pins) { pin in
+                            if selectedCategory.contains(pin.category ?? "") {
+                                ZStack {
+                                    NavigationLink(destination: PinDetailView(pin: pin)) {
+                                        EmptyView()
+                                    }
+                                    .opacity(0)
+                                    ListCell(pin: pin)
+                                        .frame(width: geo.size.width * 0.9, height: 104, alignment: .leading)
+                                }
                             }
                         }
                     }
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
             }
-            Spacer()
+            .frame(width: geo.size.width, height: geo.size.height * 0.9, alignment: .top)
         }
     }
-
+    
     private func addPin() {
         withAnimation {
             let newPin = Pin(context: viewContext)

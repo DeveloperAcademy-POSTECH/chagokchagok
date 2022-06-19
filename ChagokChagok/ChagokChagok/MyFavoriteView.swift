@@ -29,24 +29,29 @@ struct MyFavoriteView: View {
     }
     
     private func myFavoriteList() -> some View {
-        List {
-            ForEach(pins) { pin in
-                NavigationLink {
-                    PinDetailView(pin: pin)
-                } label: {
-                    ListCell(pin: pin)
+        VStack {
+            List {
+                ForEach(pins) { pin in
+                    ZStack {
+                        NavigationLink(destination: PinDetailView(pin: pin)) {
+                            EmptyView()
+                        }
+                        .opacity(0)
+                        ListCell(pin: pin)
+                    }
+                }
+                ForEach(courses) { course in
+                    ZStack {
+                        NavigationLink(destination: CourseDetailView(course: course)) {
+                            EmptyView()
+                        }
+                        .opacity(0)
+                        ListCellForCourse(course: course)
+                    }
                 }
             }
-            
-            ForEach(courses) { course in
-                NavigationLink {
-                    CourseDetailView(course: course)
-                } label: {
-                    ListCellForCourse(course: course)
-                }
-            }
+            .listStyle(.plain)
         }
-        .listStyle(.plain)
     }
 }
 
