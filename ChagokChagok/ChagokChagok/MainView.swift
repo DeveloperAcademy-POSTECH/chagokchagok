@@ -19,7 +19,7 @@ struct MainView: View {
     
     // TODO: 디자인 픽스되면 버튼 View로 변경 예정
     var driveStartBtn: some View {
-        NavigationLink(destination: CountDownView(firstNaviLinkActive: $firstNaviLinkActive), label: {
+        NavigationLink(destination: CountDownView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive, label: {
             ZStack(alignment: .leading) {
                 GifImage()
                     .frame(width: 204, height: 316)
