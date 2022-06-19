@@ -10,22 +10,17 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var firstNaviLinkActive = false
-
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont(name: "AppleSDGothicNeo-Bold", size: 26)!]
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.backGround.ignoresSafeArea()
                 MainView(firstNaviLinkActive: $firstNaviLinkActive)
-                    .padding(.top, 47)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Text("차곡차곡 🚙")
-                                .padding(EdgeInsets(top: 80, leading: 16, bottom: 16, trailing: 16))
-                                .font(.system(size: 26).weight(.semibold))
-                        }
-                    }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .padding(.all, 16)
+                    .navigationBarTitle("차곡차곡")
             }
         }
     }
