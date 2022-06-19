@@ -2,21 +2,19 @@ import SwiftUI
 
 struct ListCell: View {
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Pin.date, ascending: false)],
-        animation: .default) private var pins: FetchedResults<Pin>
+                  animation: .default) private var pins: FetchedResults<Pin>
     
     var pin = Pin()
-        
+    
     var body: some View {
-        GeometryReader { geo in
-            HStack {
-                listImage
-                    .padding(.trailing, 16)
-                listText
-                Spacer()
-                isfavoriteBtn
-            }
-            .frame(width: geo.size.width, height: 104, alignment: .leading)
+        HStack {
+            listImage
+                .padding(.trailing, 16)
+            listText
+            Spacer()
+            isfavoriteBtn
         }
+        .frame(width: 350, height: 104, alignment: .leading)
     }
     
     private var listImage: some View {
