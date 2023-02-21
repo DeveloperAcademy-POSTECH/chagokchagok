@@ -27,7 +27,7 @@
 
 
 ## :sparkles: Skills & Tech Stack
-swiftUI ...
+CoreLocation, CoreData, CarPlay, MapKit, SwiftUI
 
 ## :books: Documentation
 
